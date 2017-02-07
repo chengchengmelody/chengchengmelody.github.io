@@ -41,6 +41,7 @@ body {
     <script>
         var $html = document.getElementsByTagName('html')[0];
         if (window.orientation == 0 || window.orientation == 180) {
+		alert(window.orientation);
             $html.style.transform = 'rotate(90deg)';
             //$html.style.transformOrigin = '0 0';
         }
