@@ -7,6 +7,7 @@
     <p>你好</p>
     <script>
         $(function () {
+            alert(window.orientation);
             if (window.orientation == 0 || window.orientation == 180) {
                 alert("d")
                 $(body).css('transform', 'rotate(90deg)');
