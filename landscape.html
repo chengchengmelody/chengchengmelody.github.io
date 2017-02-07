@@ -14,15 +14,7 @@
                 $html.style.transformOrigin = '50% 50%';
             }
         
-        $(window).on("orientationchange", function (event) {
-            if (event.orientation == 0 || window.orientation == 180) {
-                $html.css('transform', 'rotate(90deg)');
-                $html.css('transform-origin', '50% 50%');
-            } else {
-                $html.css('transform', 'none');
-                $html.css('transform-origin', '50% 50%');
-            }
-        });
+       
     </script>
 </body>
 </html>
