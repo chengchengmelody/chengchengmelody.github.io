@@ -41,16 +41,16 @@ body {
     <script>
         var $html = document.getElementsByTagName('html')[0];
         if (window.orientation == undefined || window.orientation == 180) {
-            $html.style.transform = 'translate3d(-50%, -50%, 0px) rotate(90deg)';
+            $html.style.transform = 'rotate(90deg)';
             //$html.style.transformOrigin = '0 0';
         }
         window.onorientationchange = function () {
             var orientation = window.orientation;
             if (orientation == undefined || orientation == 180) {
-                $html.style.transform = 'translate3d(-50%, -50%, 0px) rotate(90deg)';
+                $html.style.transform = 'rotate(90deg)';
                 //$html.style.transformOrigin = '0 0';
             } else {
-                $html.style.transform = 'translate3d(-50%, -50%, 0px) rotate(0)';
+                $html.style.transform = 'rotate(0)';
             }
         };
     </script>
