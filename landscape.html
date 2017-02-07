@@ -10,8 +10,8 @@
         alert(window.orientation);
         var $html = document.getElementsByTagName('html')[0];
             if (window.orientation == 0 || window.orientation == 180) {
-                $html.css('transform', 'rotate(90deg)');
-                $html.css('transform-origin', '50% 50%');
+                $html.style.transform = 'rotate(90deg)';
+                $html.style.transformOrigin = '50% 50%';
             }
         
         $(window).on("orientationchange", function (event) {
