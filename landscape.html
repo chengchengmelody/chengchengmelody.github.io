@@ -2,19 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
 </head>
 <body>
-    <p>你好</p>
+    <p style="color:#f00;font-size:50px;margin:0;">你好</p>
+    <p style="color:#f00;font-size:50px;margin:0;">你好</p>
+    <p style="color:#f00;font-size:50px;margin:0;">你好</p>
+    <p style="color:#f00;font-size:50px;margin:0;">你好</p>
     <script>
      
-        alert(window.orientation);
         var $html = document.getElementsByTagName('html')[0];
-            if (window.orientation == 0 || window.orientation == 180) {
-                $html.style.transform = 'rotate(90deg)';
-                $html.style.transformOrigin = '50% 50%';
-            }
-        
-       
+        if (window.orientation == undefined || window.orientation == 180) {
+            $html.style.transform = 'rotate(90deg)';
+            $html.style.transformOrigin = '0 0';
+        }     
     </script>
 </body>
 </html>
