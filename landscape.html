@@ -7,19 +7,20 @@
     <p>你好</p>
     <script>
      
-            alert(window.orientation);
+        alert(window.orientation);
+        var $html = document.getElementsByTagName('html')[0];
             if (window.orientation == 0 || window.orientation == 180) {
-                $("html").css('transform', 'rotate(90deg)');
-                $("html").css('transform-origin', '50% 50%');
+                $html.css('transform', 'rotate(90deg)');
+                $html.css('transform-origin', '50% 50%');
             }
         
         $(window).on("orientationchange", function (event) {
             if (event.orientation == 0 || window.orientation == 180) {
-                $("html").css('transform', 'rotate(90deg)');
-                $("html").css('transform-origin', '50% 50%');
+                $html.css('transform', 'rotate(90deg)');
+                $html.css('transform-origin', '50% 50%');
             } else {
-                $("html").css('transform', 'none');
-                $("html").css('transform-origin', '50% 50%');
+                $html.css('transform', 'none');
+                $html.css('transform-origin', '50% 50%');
             }
         });
     </script>
