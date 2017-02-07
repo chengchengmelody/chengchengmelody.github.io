@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>你好</p>
+    <script>
+        $(function () {
+            if (window.orientation == 0 || window.orientation == 180) {
+                $(body).css('transform', 'rotate(90deg)');
+                $(body).css('transform-origin', '50% 50%');
+            }
+        });
+        $(window).on("orientationchange", function (event) {
+            if (event.orientation == 0 || window.orientation == 180) {
+                $(body).css('transform', 'rotate(90deg)');
+                $(body).css('transform-origin', '50% 50%');
+            } else {
+                $(body).css('transform', 'none');
+                $(body).css('transform-origin', '50% 50%');
+            }
+        });
+    </script>
+</body>
+</html>
