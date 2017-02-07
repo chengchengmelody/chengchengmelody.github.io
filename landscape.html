@@ -39,12 +39,20 @@ body {
     <p style="color:#f00;font-size:50px;margin:0;">你好</p>
     <p style="color:#f00;font-size:50px;margin:0;">你好</p>
     <script>
-     
         var $html = document.getElementsByTagName('html')[0];
         if (window.orientation == undefined || window.orientation == 180) {
             $html.style.transform = 'rotate(90deg)';
-            $html.style.transformOrigin = '0 0';
-        }     
+            //$html.style.transformOrigin = '0 0';
+        }
+        window.onorientationchange = function () {
+            var orientation = window.orientation;
+            if (orientation == undefined || orientation == 180) {
+                $html.style.transform = 'rotate(90deg)';
+                //$html.style.transformOrigin = '0 0';
+            } else {
+                $html.style.transform = 'rotate(0)';
+            }
+        };
     </script>
 </body>
 </html>
