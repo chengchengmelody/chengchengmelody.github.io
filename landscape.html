@@ -6,14 +6,14 @@
 <body>
     <p>你好</p>
     <script>
-        $(function () {
+     
             alert(window.orientation);
             if (window.orientation == 0 || window.orientation == 180) {
                 alert("d")
                 $(body).css('transform', 'rotate(90deg)');
                 $(body).css('transform-origin', '50% 50%');
             }
-        });
+        
         $(window).on("orientationchange", function (event) {
             if (event.orientation == 0 || window.orientation == 180) {
                 $(body).css('transform', 'rotate(90deg)');
