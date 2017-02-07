@@ -40,13 +40,13 @@ body {
     <p style="color:#f00;font-size:50px;margin:0;">你好</p>
     <script>
         var $html = document.getElementsByTagName('html')[0];
-        if (window.orientation == undefined || window.orientation == 180) {
+        if (window.orientation == 0 || window.orientation == 180) {
             $html.style.transform = 'rotate(90deg)';
             //$html.style.transformOrigin = '0 0';
         }
         window.onorientationchange = function () {
             var orientation = window.orientation;
-            if (orientation == undefined || orientation == 180) {
+            if (orientation == 0 || orientation == 180) {
                 $html.style.transform = 'rotate(90deg)';
                 //$html.style.transformOrigin = '0 0';
             } else {
