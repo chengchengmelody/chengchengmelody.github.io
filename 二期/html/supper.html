@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>夜宵</title>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/lib/weui.min.css"/>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/css/jquery-weui.min.css"/>
+    <link rel="stylesheet" href="../common/css/public.css"/>
+    <script src="../Plugin/JqueryWeUI/lib/jquery-2.1.4.js"></script>
+    <script src="../Plugin/JqueryWeUI/lib/fastclick.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/jquery-weui.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/swiper.min.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/city-picker.min.js"></script>
+    <script type="text/javascript" src="../common/js/public.js"></script>
+</head>
+
+<body ontouchstart class="body-gray">
+     <!-- 滚动 -->
+    <div class="swiper-container detail">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../common/images/product/q.png" /></div>
+            <div class="swiper-slide"><img src="../common/images/product/q.png" /></div>
+            <div class="swiper-slide"><img src="../common/images/product/q.png" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+<div class="supper-title">
+    <input class="weui-input supper-week" id="week" type="text" value="星期三">
+    <input class="weui-input supper-address" id="address" type="text" value="西格玛">
+</div>
+<div class="supper-tab">
+    <ul class="home-ul">
+        <li class="active"><a href="javascript:void(0)">巴黎贝甜</a></li>
+        <li>
+            <a href="javascript:void(0)">爱玛客</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">麦当劳</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">鑫顺源达</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">鑫顺源达1</a>
+        </li>
+        <li>
+            <a href="javascript:void(0)">鑫顺源达2</a>
+        </li>
+    </ul>
+</div>
+<p class="supper-tip">
+    取餐地点：深圳市南山区科技园飞亚达大厦3-10楼
+</p>
+
+<div class="tea">
+    <div class="tea-left">
+        <ul>
+            <li class="active"><a href="javascript:void(0)" onclick="jumpTo('gz')">果汁</a></li>
+            <li><a href="javascript:void(0)" onclick="jumpTo('kf')">咖啡</a></li>
+            <li><a href="javascript:void(0)" onclick="jumpTo('nn')">牛奶</a></li>
+            <li><a href="javascript:void(0)" onclick="jumpTo('ly')">冷饮</a></li>
+        </ul>
+    </div>
+    <div class="tea-right">
+        <div class="item" id="gz">
+            <p class="itemTitle">果汁</p>
+            <ul>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">二锅头</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">泸州老窖</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">东鹏特饮</p>
+
+                        <div class="likeUnlike ">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise likeChecked"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">RIO</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="item" id="kf">
+            <p class="itemTitle">咖啡</p>
+            <ul>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="item" id="nn">
+            <p class="itemTitle">牛奶</p>
+            <ul>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="item w100"  id="ly">
+            <p class="itemTitle">冷饮</p>
+            <ul>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="../common/images/product/c1.png" class="pic">
+
+                    <div class="wrap">
+                        <p class="">好时光经典果汁</p>
+
+                        <div class="likeUnlike">
+                            <span class="likeNum">666</span>
+
+                            <div class="praise like"></div>
+                            <span class="unlikeNum">222</span>
+
+                            <div class="belittle unlike"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 弹出框 -->
+<div class="tea-dialog">
+    <div class="con">
+        <img src="../common/images/product/c1.png" class="pic">
+
+        <div class="wrap">
+            <h1>柠檬鲜橙汁</h1>
+
+            <p>本品采用鲜榨鲜脐橙以及柠檬现榨调制而成，清凉爽口更解渴</p>
+
+            <div class="num"></div>
+            <div class="evaluate">
+                <i value="1" id="evaluate1"></i>
+                <i value="2" id="evaluate2"></i>
+                <i value="3" id="evaluate3"></i>
+                <i value="4" id="evaluate4"></i>
+                <i value="5" id="evaluate5"></i>
+            </div>
+        </div>
+        <a href="javascript:;">确定</a>
+    </div>
+    <div class="bg"></div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        // 头部导航
+        $(".supper-tab ul li").click(function () {
+            $(this).siblings().removeClass('active').end().addClass('active');
+        });
+
+        $(".tea-left li").click(function () {
+            $(this).siblings().removeClass('active').end().addClass('active');
+        });
+        $(".tea-right").delegate("a", "click", function () {
+            $("body").addClass('hidden');
+            $(".tea-dialog").show();
+        });
+        $(".tea-dialog a").click(function () {
+            $(".tea-dialog").hide();
+            $("body").removeClass('hidden');
+        });
+        $(".evaluate i").click(function () {
+            var index = $(this).index() + 2;
+            $(".evaluate i").removeClass('active');
+            for (var i = 1; i < index; i++) {
+                $("#evaluate" + i).addClass('active');
+            }
+        });
+        // 星期
+        $("#week").select({
+            title: "请选择星期",
+            items: ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+            onChange: function (d) {
+                console.log(this, d);
+            },
+            onClose: function () {
+                console.log("close");
+            },
+            onOpen: function () {
+                console.log("open");
+            },
+        });
+        // 地址
+        $("#address").select({
+            title: "请选择地点",
+            items: ["西格玛", "银科", "第三级"],
+            onChange: function (d) {
+                console.log(this, d);
+            },
+            onClose: function () {
+                console.log("close");
+            },
+            onOpen: function () {
+                console.log("open");
+            },
+        });
+
+    });
+
+    $(document).ready(function(){
+        var totalH = $("html").height();
+        var h1 = $(".supper-title").height();
+        var h2 = $(".supper-tab").height();
+        var h3 = $(".supper-tip").height();
+        $(".tea").height(totalH - h1 - h2 - h3);
+        setScrollMapFn();
+        setPraiseFn();
+        setScrollListenFn();
+    })
+    //cq
+    $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 3000
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>我的北分</title>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/lib/weui.min.css"/>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/css/jquery-weui.min.css"/>
+    <link rel="stylesheet" href="../common/css/public.css"/>
+    <script src="../Plugin/JqueryWeUI/lib/jquery-2.1.4.js"></script>
+    <script src="../Plugin/JqueryWeUI/lib/fastclick.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/jquery-weui.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/swiper.min.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/city-picker.min.js"></script>
+    <script type="text/javascript" src="../common/js/public.js"></script>
+</head>
+
+<body ontouchstart>
+<!-- 返回 -->
+<div class="return-last">
+    <a href="javascript:history.go(-1)">
+        <img src="../common/images/icon/back_icon.png"></a>
+    意见详情
+</div>
+<div class="sug-detail">
+    <div class="sug-list_left">
+        <img class="sug-list_left_userImage" src="../common/images/icon/calendar_icon.png"/>
+    </div>
+    <div class="sug-list_right">
+        <div class="sug-list-line1">
+            <span class="sug-list-line1_title">还没有想好标题，肿么办</span>
+
+            <div class="sug-list-line1_del" onclick="confirmDelFn()">
+                <img src="../common/images/product/delete_icon.png" class="sug-del_icon"></img>
+                <span>删除</span>
+            </div>
+        </div>
+        <div class="sug-list-line2">
+            <img src="../common/images/product/label_icon.png"
+                 class="sug-list-line2_img">
+            <span class="sug-list-line2_type" >服务</span>
+            <span class="sug-list-line2_time">2017-05-12</span>
+            <span class="sug-list-line2_state">已回复</span>
+        </div>
+        <div class="sug-list-line3" >
+            <p>
+                个人觉得还是很不错的，有些地方很人性化，
+                但是依旧还有提升的空间啦。希望可以越做越好，
+                然后让我们得到更多的便利哦。
+            </p>
+        </div>
+        <div class="sug-list-line4">
+            <img src="../common/images/product/sug.png"
+                 class="sug-list-line4_img">
+            <img src="../common/images/product/sug.png"
+                 class="sug-list-line4_img">
+        </div>
+    </div>
+</div>
+<div>
+    <div class="sug-list_left">
+        <p class="sug-list_left_replay">回复:</p>
+    </div>
+    <div class="sug-list_right">
+        <p class="sug-list_right_replayContent">非常感谢您的建议，我们以后会更加努 力，为大家提供更好的服务！</p>
+        <p class="sug-detail_status">已解决</p>
+    </div>
+</div>
+<div class="sug-detail-userAct">
+    <div class="sug-detail-userAct_done">已解决，返回列表</div>
+    <div class="sug-detail-userAct_undo">未解决，继续提问?</div>
+</div>
+</body>
+
+</html>

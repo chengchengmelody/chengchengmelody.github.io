@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>北极熊</title>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/lib/weui.min.css" />
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../common/css/public.css" />
+    <script src="../Plugin/JqueryWeUI/lib/jquery-2.1.4.js"></script>
+    <script src="../Plugin/JqueryWeUI/lib/fastclick.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/jquery-weui.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/swiper.min.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/city-picker.min.js"></script>
+</head>
+
+<body ontouchstart>
+    <div class="eval">
+        <p>
+            <a href="javascript:void(0)" id="evaluation" class="weui-btn weui-btn_primary">我要测评</a>
+            <a href="evaluation.html" class="weui-btn weui-btn_plain-primary">我要预约</a>
+        </p>
+    </div>
+    <div class="eval-bg"></div>
+    <div class="eval-mmpt">
+        <div class="wrap">
+            <h1>请选测试题目类型</h1>
+            <div class="weui-cells weui-cells_checkbox">
+                <label class="weui-cell weui-check__label" for="s11">
+                    <div class="weui-cell__bd">
+                        <p>职业价值观测试</p>
+                    </div>
+                    <div class="weui-cell__hd">
+                        <input type="radio" class="weui-check" name="checkbox1" id="s11" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                </label>
+                <label class="weui-cell weui-check__label" for="s12">
+                    <div class="weui-cell__bd">
+                        <p>腾讯九型人格测试</p>
+                    </div>
+                    <div class="weui-cell__hd">
+                        <input type="radio" class="weui-check" name="checkbox1" id="s12" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                </label>
+                <label class="weui-cell weui-check__label" for="s13">
+                    <div class="weui-cell__bd">
+                        <p>DISC测试</p>
+                    </div>
+                    <div class="weui-cell__hd">
+                        <input type="radio" class="weui-check" name="checkbox1" id="s13" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <a href="mmpt.html" class="confirm">确认</a>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            $("#evaluation").click(function(){
+                $(".eval-bg").show();
+                $(".eval-mmpt").show();
+            });
+            $(".eval-bg").click(function(){
+                $(".eval-bg").hide();
+                $(".eval-mmpt").hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

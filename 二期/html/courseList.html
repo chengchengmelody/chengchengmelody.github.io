@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>健身房预约</title>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/lib/weui.min.css" />
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../common/css/public.css" />
+    <script src="../Plugin/JqueryWeUI/lib/jquery-2.1.4.js"></script>
+    <script src="../Plugin/JqueryWeUI/lib/fastclick.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/jquery-weui.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/swiper.min.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/city-picker.min.js"></script>
+</head>
+
+<body ontouchstart class="body-gray">
+    
+    <!-- 返回 -->
+    <div class="return-last">
+        <a href="javascript:history.go(-1)"><img src="../common/images/icon/back_icon.png"></a>
+        课程列表
+    </div> 
+    <div class="gym-wrap p-r-no">
+        <h1 class="course-title">
+            <em class="btn-left"></em>
+            <span>2月24日</span>
+            <em class="btn-right"></em>
+            <!-- <img src="../common/images/icon/left_icon.png">
+            <img src="../common/images/icon/right_icon.png"> -->
+        </h1>
+        <ul class="gym-course">
+            <li>
+                <img src="../common/images/product/pic1.jpg" class="pic">
+                <h1>健身私教一对一瘦指导</h1>
+                <p class="con">简介：专业健身教练进行体能训练</p>
+                <p class="time">时间：2017-02-12 12:00</p>
+                <img src="../common/images/icon/label.png" class="yy">
+            </li>
+            <li>
+                <img src="../common/images/product/pic1.jpg" class="pic">
+                <h1>健身私教一对一瘦指导</h1>
+                <p class="con">简介：专业健身教练进行体能训练</p>
+                <p class="time">时间：2017-02-12 12:00</p>
+                <img src="../common/images/icon/label.png" class="yy">
+            </li>
+            <li>
+                <img src="../common/images/product/pic1.jpg" class="pic">
+                <h1>健身私教一对一瘦指导</h1>
+                <p class="con">简介：专业健身教练进行体能训练</p>
+                <p class="time">时间：2017-02-12 12:00</p>
+            </li>
+            <li>
+                <img src="../common/images/product/pic1.jpg" class="pic">
+                <h1>健身私教一对一瘦指导</h1>
+                <p class="con">简介：专业健身教练进行体能训练</p>
+                <p class="time">时间：2017-02-12 12:00</p>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    $("#name").select({
+        title: "",
+        items: [{
+            title: "希格玛健身房",
+            value: 1
+        }, {
+            title: "希格玛健身房1",
+            value: 3
+        }, {
+            title: "希格玛健身房2",
+            value: 4
+        }]
+    });
+    </script>
+</body>
+
+</html>

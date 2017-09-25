@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>心理测评</title>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/lib/weui.min.css" />
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../common/css/public.css" />
+    <script src="../Plugin/JqueryWeUI/lib/jquery-2.1.4.js"></script>
+    <script src="../Plugin/JqueryWeUI/lib/fastclick.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/jquery-weui.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/swiper.min.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/city-picker.min.js"></script>
+</head>
+
+<body ontouchstart class="body-gray">
+    <!-- 返回 -->
+    <div class="return-last text-center">
+        <input class="weui-input select-test" id="name" type="text" value="腾讯九型人格测试">
+    </div>
+    <div class="mmpt">
+        <div class="tip">
+            <p>亲爱的用户您好！</p>
+            <p>这是一份关于心里健康的测试题，您的回答将为我们的研究提供宝贵的依据，所有资料均会保密，不会透露答题者的个人信息，请放心答题。</p>
+        </div>
+        <ul class="mmpt-list">
+            <li>
+                <h1>1.您的性别</h1>
+                <div class="weui-cells weui-cells_checkbox">
+                    <label class="weui-cell weui-check__label" for="s11">
+                        <div class="weui-cell__hd">
+                            <input type="radio" class="weui-check" name="checkbox1" id="s11" checked="checked">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>男</p>
+                        </div>
+                    </label>
+                    <label class="weui-cell weui-check__label" for="s12">
+                        <div class="weui-cell__hd">
+                            <input type="radio" name="checkbox1" class="weui-check" id="s12">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>女</p>
+                        </div>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <h1>1.您从事的职业</h1>
+                <div class="weui-cells weui-cells_checkbox">
+                    <label class="weui-cell weui-check__label" for="s15">
+                        <div class="weui-cell__hd">
+                            <input type="radio" class="weui-check" name="checkbox1" id="s15" checked="checked">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>开发工程师</p>
+                        </div>
+                    </label>
+                    <label class="weui-cell weui-check__label" for="s16">
+                        <div class="weui-cell__hd">
+                            <input type="radio" name="checkbox1" class="weui-check" id="s16">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>产品经理</p>
+                        </div>
+                    </label>
+                    <label class="weui-cell weui-check__label" for="s13">
+                        <div class="weui-cell__hd">
+                            <input type="radio" name="checkbox1" class="weui-check" id="s13">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>项目总监</p>
+                        </div>
+                    </label>
+                    <label class="weui-cell weui-check__label" for="s14">
+                        <div class="weui-cell__hd">
+                            <input type="radio" name="checkbox1" class="weui-check" id="s14">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>UI设计师</p>
+                        </div>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <h1>3.您对现在从事的工作还算满意吗？</h1>
+                <div class="weui-cells weui-cells_checkbox">
+                    <label class="weui-cell weui-check__label" for="s17">
+                        <div class="weui-cell__hd">
+                            <input type="radio" class="weui-check" name="checkbox1" id="s17" checked="checked">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>满意</p>
+                        </div>
+                    </label>
+                    <label class="weui-cell weui-check__label" for="s18">
+                        <div class="weui-cell__hd">
+                            <input type="radio" name="checkbox1" class="weui-check" id="s18">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>不满意</p>
+                        </div>
+                    </label>
+                </div>
+            </li>
+        </ul>
+        <p class="mmpt-btn">
+            <!-- 提交成功跳转 -->
+            <a href="mmptSuccess.html" class="weui-btn weui-btn-auto weui-btn_primary">
+                提交
+            </a>
+            <!-- 提交失败跳转 -->
+            <!-- <a href="mmptFail.html" class="weui-btn weui-btn-auto weui-btn_primary">
+                提交
+            </a> -->
+        </p>
+    </div>
+    <script type="text/javascript">
+    $("#name").select({
+        title: "",
+        items: [{
+            title: "职业价值观测试",
+            value: 1
+        }, {
+            title: "腾讯九型人格测试",
+            value: 3
+        }, {
+            title: "DISC测试",
+            value: 4
+        }]
+    });
+    </script>
+</body>
+
+</html>

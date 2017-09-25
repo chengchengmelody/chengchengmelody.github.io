@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>我的北分</title>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/lib/weui.min.css" />
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../common/css/public.css" />
+    <script src="../Plugin/JqueryWeUI/lib/jquery-2.1.4.js"></script>
+    <script src="../Plugin/JqueryWeUI/lib/fastclick.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/jquery-weui.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/swiper.min.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/city-picker.min.js"></script>
+    <script type="text/javascript" src="../common/js/public.js"></script>
+</head>
+<body ontouchstart class="body-gray">
+    <div class="zjMask">
+    </div>
+    <div class="zjMsg">
+        <p class="zjMsg_title">提示</p>
+        <div class="zjMsg_content">
+            <p > 大幅度阿斯顿发斯蒂芬</p>
+        </div>
+        <div class="zjMsg_action">
+            <span class="zjMsg_cancel" onclick="cancelDelFn()">取消</span>
+            <span class="zjMsg_ok" onclick="delFn()">确定</span>
+        </div>
+    </div>
+    <div class="home-tab">
+        <ul class="home-ul p-fix">
+            <li class="active"><a href="javascript:void(0)">我的意见</a></li>
+            <li>
+                <a href="javascript:void(0)">我有意见</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <!-- 我的意见 -->
+        <div class="sug sug1" style="display: block;">
+            <!-- 暂无意见 -->
+            <div style="display: none;">
+                <p class="sug-pic">
+                    <img src="../common/images/icon/bg.png">
+                </p>
+                <p class="sug-tip">您还没有写评论哦~</p>
+                <p>
+                    <a href="javascript:void(0)" class="weui-btn weui-btn_primary ">
+                        <i class="write"></i> 写评论
+                    </a>
+                </p>
+            </div>
+            <!-- 意见列表 -->
+            <div>
+                <ul class="sug-list">
+                    <li>
+                        <div>
+                            <div class="sug-list_left">
+                                <img class="sug-list_left_userImage" src="../common/images/icon/calendar_icon.png" />
+                            </div>
+                            <div class="sug-list_right">
+                                <div class="sug-list-line1">
+                                    <span class="sug-list-line1_title">还没有想好标题，肿么办</span>
+                                    <div class="sug-list-line1_del" onclick="confirmDelFn()">
+                                        <img src="../common/images/product/delete_icon.png" class="sug-del_icon"></img>
+                                        <span >删除</span>
+                                    </div>
+                                </div>
+                                <div class="sug-list-line2">
+                                    <img src="../common/images/product/label_icon.png"
+                                         class="sug-list-line2_img">
+                                    <span class="sug-list-line2_type">服务</span>
+                                    <span class="sug-list-line2_time">2017-05-12</span>
+                                    <span class="sug-list-line2_state">已回复</span>
+                                </div>
+                                <div class="sug-list-line3">
+                                    <p>
+                                        个人觉得还是很不错的，有些地方很人性化，
+                                        但是依旧还有提升的空间啦。希望可以越做越好，
+                                        然后让我们得到更多的便利哦。
+                                    </p>
+                                </div>
+                                <!--<div class="sug-list-line4">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                </div>-->
+                                <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
+          <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+                                          <figcaption itemprop="caption description">Image caption  1</figcaption>
+                                          
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+          <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 2</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
+          <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 3</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
+          <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 4</figcaption>
+    </figure>
+
+
+  </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sug-list_left">
+                                <p class="sug-list_left_replay">回复:</p>
+                            </div>
+                            <div class="sug-list_right">
+                                <p class="sug-list_right_replayContent">非常感谢您的建议，我们以后会更加努         力，为大家提供更好的服务！</p>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div>
+                            <div class="sug-list_left">
+                                <img class="sug-list_left_userImage" src="../common/images/icon/calendar_icon.png" />
+                            </div>
+                            <div class="sug-list_right">
+                                <div class="sug-list-line1">
+                                    <span class="sug-list-line1_title">还没有想好标题，肿么办</span>
+                                    <div class="sug-list-line1_del" onclick="confirmDelFn()">
+                                        <img src="../common/images/product/delete_icon.png" class="sug-del_icon"></img>
+                                        <span >删除</span>
+                                    </div>
+                                </div>
+                                <div class="sug-list-line2">
+                                    <img src="../common/images/product/label_icon.png"
+                                         class="sug-list-line2_img">
+                                    <span class="sug-list-line2_type">服务</span>
+                                    <span class="sug-list-line2_time">2017-05-12</span>
+                                    <span class="sug-list-line2_state">已回复</span>
+                                </div>
+                                <div class="sug-list-line3">
+                                    <p>
+                                        个人觉得还是很不错的，有些地方很人性化，
+                                        但是依旧还有提升的空间啦。希望可以越做越好，
+                                        然后让我们得到更多的便利哦。
+                                    </p>
+                                </div>
+                                <div class="sug-list-line4">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sug-list_left">
+                                <p class="">回复:</p>
+                            </div>
+                            <div class="sug-list_right">
+                                <p>非常感谢您的建议，我们以后会更加努         力，为大家提供更好的服务！</p>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div>
+                            <div class="sug-list_left">
+                                <img class="sug-list_left_userImage" src="../common/images/icon/calendar_icon.png" />
+                            </div>
+                            <div class="sug-list_right">
+                                <div class="sug-list-line1">
+                                    <span class="sug-list-line1_title">还没有想好标题，肿么办</span>
+                                    <div class="sug-list-line1_del" onclick="confirmDelFn()">
+                                        <img src="../common/images/product/delete_icon.png" class="sug-del_icon"></img>
+                                        <span >删除</span>
+                                    </div>
+                                </div>
+                                <div class="sug-list-line2">
+                                    <img src="../common/images/product/label_icon.png"
+                                         class="sug-list-line2_img">
+                                    <span class="sug-list-line2_type">服务</span>
+                                    <span class="sug-list-line2_time">2017-05-12</span>
+                                    <span class="sug-list-line2_state">已回复</span>
+                                </div>
+                                <div class="sug-list-line3">
+                                    <p>
+                                        个人觉得还是很不错的，有些地方很人性化，
+                                        但是依旧还有提升的空间啦。希望可以越做越好，
+                                        然后让我们得到更多的便利哦。
+                                    </p>
+                                </div>
+                                <div class="sug-list-line4">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                    <img src="../common/images/product/sug.png"
+                                         class="sug-list-line4_img">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="sug-list_left">
+                                <p class="">回复:</p>
+                            </div>
+                            <div class="sug-list_right">
+                                <p>非常感谢您的建议，我们以后会更加努         力，为大家提供更好的服务！</p>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+                <img src="../common/images/icon/comments_btn.png" class="sug-write">
+            </div>
+        </div>
+        <!-- 我有意见 -->
+        <div class="sug sug2">
+            <div class="weui-cells">
+                <div class="weui-cell select-cell">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label">意见类型：</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input"
+                               id="user"
+                               type="text"
+                               value="请选择"
+                               readonly
+                               disabled="disabled" 
+                               onfocus="this.blur();"
+                               unselectable="on"
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells sug-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label">标题：</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="11" type="text" value="" placeholder="请输入标题…(15字以内)">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label">意见：</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请输入您的意见…"></textarea>
+                    </div>
+                </div>
+                <div class="weui-cell sug-upload">
+                    <div class="weui-cell__bd">
+                        <div class="sug-img">
+                            <img src="../common/images/product/sug.png" class="upload-img">
+                            <img src="../common/images/icon/close.png" class="close">
+                        </div>
+                        <div class="sug-img">
+                            <img src="../common/images/product/sug.png" class="upload-img">
+                            <img src="../common/images/icon/close.png" class="close">
+                        </div>
+                        <div class="sug-img">
+                            <img src="../common/images/product/sug.png" class="upload-img">
+                            <img src="../common/images/icon/close.png" class="close">
+                        </div>
+
+                        <div class="upload">
+                            <p>添加图片</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <a href="javascript:void(0)" class="weui-btn weui-btn_primary" onclick="loading('show')">
+                提交
+            </a>
+            </p>
+        </div>
+    </div>
+    <!-- 正在加载中 -->
+    <div class="loading">
+        <img src="../common/images/icon/loading.gif">
+    </div>
+    <script>
+    $("#user").select({
+        title: "",
+        items: [{
+            title: "行政",
+            value: 1
+        }, {
+            title: "服务",
+            value: 3
+        }, {
+            title: "商城",
+            value: 4
+        }]
+    });
+    $(function() {
+        $(".sug-write").click(function() {
+            $('.home-ul li:last-child').siblings().removeClass('active').end().addClass('active');
+            $('.sug2').siblings().hide().end().show();
+        });
+
+    });
+    // 正在加载中
+    function loading (status) {
+        if (status == 'show') {
+            $("body").addClass('no-scroll');
+            $(".loading").show();
+        } else {
+            $("body").removeClass('no-scroll');
+            $(".loading").hide();
+        }
+    }
+    var confirmDelFn = function(){
+        $(".zjMask").show();
+        $('.zjMsg').show();
+    };
+    var cancelDelFn = function(){
+        $(".zjMask").hide();
+        $('.zjMsg').hide();
+    };
+    var delFn = function(){
+        location.href.refresh();
+    };
+    </script>
+</body>
+
+</html>

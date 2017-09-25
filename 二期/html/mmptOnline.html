@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>北极熊</title>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/lib/weui.min.css" />
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../common/css/public.css" />
+    <script src="../Plugin/JqueryWeUI/lib/jquery-2.1.4.js"></script>
+    <script src="../Plugin/JqueryWeUI/lib/fastclick.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/jquery-weui.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/swiper.min.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/city-picker.min.js"></script>
+</head>
+
+<body ontouchstart>
+    <!-- 返回 -->
+    <div class="return-last">
+        <a href="javascript:history.go(-1)"><img src="../common/images/icon/back_icon.png"></a>
+        我要测评
+    </div>
+    <div class="mmpt-online">
+        <div class="mmpt">
+            <div class="tip">
+                <p>保密声明！</p>
+                <p>亲爱的用户您好！我们将承诺，保护来访者个人隐私，对心理咨询过程中的有关信息，都将在严格保密的情况下进行保存，同时心理咨询师也将严格遵守职业道德中保密原则的有关规定。</p>
+            </div>
+        </div>
+        <div class="mmpt-on-con">
+            <ul class="header">
+                <li class="active">线上咨询</li>
+                <li>线下咨询</li>
+            </ul>
+            <div>
+            <div class="up con1">
+                <p>请输入RTX:</p>
+                <input type="text" name="">
+            </div>
+            <div class="down con2">
+                <p>预约时间:</p>
+                <input class="weui-input" id="time1" type="text" value="">
+                <input class="weui-input" id="time2" type="text" value="">
+                <input class="weui-input" id="time3" type="text" value="">
+            </div>
+            </div>
+        </div>
+        <p class="mmpt-on-btn">
+            <a href="rtxSuccess.html" class="weui-btn weui-btn_primary">
+                提交
+            </a>
+        </p>
+    </div>
+    <script>
+    $(function() {
+        FastClick.attach(document.body);
+        $("#time1").datetimePicker({
+            title: '预约时间',
+            min: "1990-12-12",
+            max: "2022-12-12 12:12",
+            onChange: function(picker, values, displayValues) {
+                console.log(values);
+            }
+        });
+        $("#time2").datetimePicker({
+            title: '预约时间',
+            min: "1990-12-12",
+            max: "2022-12-12 12:12",
+            onChange: function(picker, values, displayValues) {
+                console.log(values);
+            }
+        });
+        $("#time3").datetimePicker({
+            title: '预约时间',
+            min: "1990-12-12",
+            max: "2022-12-12 12:12",
+            onChange: function(picker, values, displayValues) {
+                console.log(values);
+            }
+        });
+        $(".header li").click(function() {
+            var index = $(this).index() + 1;
+            $(this).siblings().removeClass('active').end().addClass('active');
+            $(".con" + index).siblings().hide().end().show();
+        });
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>理疗预约</title>
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/lib/weui.min.css" />
+    <link rel="stylesheet" href="../Plugin/JqueryWeUI/css/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../common/css/public.css" />
+    <script src="../Plugin/JqueryWeUI/lib/jquery-2.1.4.js"></script>
+    <script src="../Plugin/JqueryWeUI/lib/fastclick.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/jquery-weui.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/swiper.min.js"></script>
+    <script src="../Plugin/JqueryWeUI/js/city-picker.min.js"></script>
+</head>
+
+<body ontouchstart class="body-gray">
+    <div class="mmpt-on-con phy">
+        <div class="down">
+            <p>预约时间:</p>
+            <input class="weui-input" id="time1" type="text" value="">
+            <input class="weui-input" id="time2" type="text" value="">
+            <input class="weui-input" id="time3" type="text" value="">
+        </div>
+    </div>
+    <div class="mmpt-on-con phy">
+        <div class="project">
+            <p>预约项目:</p>
+            <input class="weui-input" id="project" type="text" value="请选择">
+        </div>
+    </div>
+    <div class="mmpt-on-con phy">
+        <div class="address">
+            <p>预约地点:</p>
+            <input class="weui-input" id="address" type="text" value="请选择">
+        </div>
+    </div>
+    <p class="mmpt-on-btn">
+        <a href="rtxSuccess.html" class="weui-btn weui-btn_primary">
+            提交
+        </a>
+    </p>
+    <script>
+    $(function() {
+        FastClick.attach(document.body);
+        $("#time1").datetimePicker({
+            title: '预约时间',
+            min: "1990-12-12",
+            max: "2022-12-12 12:12",
+            onChange: function(picker, values, displayValues) {
+                console.log(values);
+            }
+        });
+        $("#time2").datetimePicker({
+            title: '预约时间',
+            min: "1990-12-12",
+            max: "2022-12-12 12:12",
+            onChange: function(picker, values, displayValues) {
+                console.log(values);
+            }
+        });
+        $("#time3").datetimePicker({
+            title: '预约时间',
+            min: "1990-12-12",
+            max: "2022-12-12 12:12",
+            onChange: function(picker, values, displayValues) {
+                console.log(values);
+            }
+        });
+        $(".header li").click(function() {
+            var index = $(this).index() + 1;
+            $(this).siblings().removeClass('active').end().addClass('active');
+            $(".con" + index).siblings().hide().end().show();
+        });
+        $("#project").select({
+            title: "",
+            items: [{
+                title: "条目一",
+                value: 1
+            }, {
+                title: "条目二",
+                value: 3
+            }, {
+                title: "条目三",
+                value: 4
+            }]
+        });
+        $("#address").select({
+            title: "",
+            items: [{
+                title: "条目一",
+                value: 1
+            }, {
+                title: "条目二",
+                value: 3
+            }, {
+                title: "条目三",
+                value: 4
+            }]
+        });
+    });
+    </script>
+</body>
+
+</html>
