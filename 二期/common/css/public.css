@@ -1908,9 +1908,11 @@ p.mmpt-return a:first-child {
 .zjMask{
     width:100%;
     height:100%;
+    left:0;
+    top:0;
     background:gray;
     opacity:.5;
-    position:absolute;
+    position:fixed;
     display:none;
     z-index:3;
 }

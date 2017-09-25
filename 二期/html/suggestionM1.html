@@ -336,7 +336,9 @@
             <p class="weui_toast_content">已完成</p>
         </div>
     </div>
-            <div id="show" style="position:absolute;bottom:0;height:100px;border:1px solid #ccc;background:#f00;width:100px;z-index:4;display:none;"></div>
+    <button class="ccc">button</button>
+    <input type="text" class="bbb" value="" />
+     <div id="show" style="position:absolute;bottom:0;height:100px;border:1px solid #ccc;background:#f00;width:100px;z-index:4;display:none;"></div>
 
     <script>
 
@@ -368,10 +370,16 @@
         $(obj).blur();
     });
         //cq
-    $(".weui-textarea").focus(function () {
+   
+    $('.ccc').on('click', function (e) {
+        e.preventDefault();
+        $('input.bbb').trigger('focus');
+    });
+    $('input.bbb').focus(function () {
+        //alert("dd")
+        $("body").addClass('no-scroll');
         $(".zjMask,#show").show();
     });
-
     </script>
 </body>
 
