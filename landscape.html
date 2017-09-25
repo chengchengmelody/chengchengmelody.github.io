@@ -4,6 +4,7 @@
     <title></title>
     <meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="screen-orientation" content="landscape">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -43,17 +44,4 @@ body {
         if (window.orientation == 0 || window.orientation == 180) {
 		alert(window.orientation);
             $html.style.transform = 'rotate(90deg)';
-            //$html.style.transformOrigin = '0 0';
-        }
-        window.onorientationchange = function () {
-            var orientation = window.orientation;
-            if (orientation == 0 || orientation == 180) {
-                $html.style.transform = 'rotate(90deg)';
-                //$html.style.transformOrigin = '0 0';
-            } else {
-                $html.style.transform = 'rotate(0)';
-            }
-        };
-    </script>
-</body>
-</html>
+            //
