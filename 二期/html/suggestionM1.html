@@ -371,12 +371,12 @@
     });
         //cq
    
-    $('.ccc').on('click', function (e) {
-        e.preventDefault();
+    $('.ccc').on('click', function () {
+        //e.preventDefault();
         $('input.bbb').trigger('focus');
     });
     $('input.bbb').focus(function () {
-        //alert("dd")
+
         $("body").addClass('no-scroll');
         $(".zjMask,#show").show();
     });
