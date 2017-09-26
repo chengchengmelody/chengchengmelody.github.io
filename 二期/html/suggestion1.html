@@ -42,7 +42,7 @@
     </div>
     <div>
         <!-- 我的意见 -->
-        <div class="sug sug1" style="display: block;">
+        <div class="sug sug1 marT40" style="display: block;">
             <!-- 暂无意见 -->
             <div style="display: none;">
                 <p class="sug-pic">
@@ -65,6 +65,7 @@
                             </div>
                             <div class="sug-list_right">
                                 <div class="sug-list-line1">
+                                    <p class="niCheng">Meng yingying</p>
                                     <span class="sug-list-line1_title">还没有想好标题，肿么办</span>
                                     <div class="sug-list-line1_del" onclick="confirmDelFn()">
                                         <img src="../common/images/product/delete_icon.png" class="sug-del_icon"></img>
@@ -104,10 +105,24 @@
                                 <p class="sug-list_left_replay">回复:</p>
                             </div>
                             <div class="sug-list_right">
-                                <p class="sug-list_right_replayContent">非常感谢您的建议，我们以后会更加努         力，为大家提供更好的服务！</p>
+                                <div class="delReplay" >
+                                    <p class="delReplay_txt"><span class="copy" onpaste="myFunction()">复制</span><span>删除</span></p>
+                                    <span class="delReplay_triangle"></span>
+                                </div>
+                                <p class="sug-list_right_replayContent" contenteditable="true">非常感谢您的建议，我们以后会更加努力，为大家提供更好的服务！</p>
                             </div>
                         </div>
-
+                         <!-- add content -->
+                        <div class="clearfix">
+                            <div class="sug-list_left">
+                                <p class="sug-list_left_replay">回复:</p>
+                            </div>
+                            <div class="sug-list_right">
+                                <textarea class="list_right_tex" placeholder="请输入内容"></textarea>
+                                <div class="send_btn clearfix">发送</div>
+                            </div>                            
+                        </div>
+                        <!-- add content end -->
                     </li>
                     <li>
                         <div>
@@ -152,13 +167,12 @@
                         </div>
                         <div>
                             <div class="sug-list_left">
-                                <p class="">回复:</p>
+                                <p class="sug-list_left_replay">回复:</p>
                             </div>
                             <div class="sug-list_right">
-                                <p>非常感谢您的建议，我们以后会更加努         力，为大家提供更好的服务！</p>
+                                <p class="sug-list_right_replayContent">非常感谢您的建议，我们以后会更加努力，为大家提供更好的服务！</p>
                             </div>
                         </div>
-
                     </li>
                     <li>
                         <div>
@@ -203,10 +217,10 @@
                         </div>
                         <div>
                             <div class="sug-list_left">
-                                <p class="">回复:</p>
+                                <p class="sug-list_left_replay">回复:</p>
                             </div>
                             <div class="sug-list_right">
-                                <p>非常感谢您的建议，我们以后会更加努         力，为大家提供更好的服务！</p>
+                                <p class="sug-list_right_replayContent">非常感谢您的建议，我们以后会更加努         力，为大家提供更好的服务！</p>
                             </div>
                         </div>
 
@@ -280,10 +294,6 @@
             </p>
         </div>
     </div>
-    <!-- 正在加载中 -->
-    <!--<div class="loading">
-        <img src="../common/images/icon/loading.gif">
-    </div>-->
     <script>
     $("#user").select({
         title: "",
@@ -305,13 +315,15 @@
         });
 
     });
-    var confirmDelFn = function(){
+    var confirmDelFn = function () {
         $(".zjMask").show();
         $('.zjMsg').show();
+        $("body").addClass('no-scroll');
     };
-    var cancelDelFn = function(){
+    var cancelDelFn = function () {
         $(".zjMask").hide();
         $('.zjMsg').hide();
+        $("body").removeClass('no-scroll');
     };
     var delFn = function(){
         location.href.refresh();
@@ -356,6 +368,25 @@
             var _imgindex = $(this).index();
             arr[_index].open(_imgindex);
         });
+
+        //设置长按回复删除
+        $('.sug-list_right_replayContent').longPress(function (obj) {
+            $(obj).parent().find('.delReplay').show();
+            $(obj).css("background", "#dfdfdf");
+            //console.log("提交删除请求" + $(obj).html());
+            $(obj).blur();
+        });
+        //
+        //$(".copy").click(function () {
+        //    var e = $(this).parent().parent().find("p.sug-list_right_replayContent");
+        //    e.select(); //选择对象
+        //    document.execCommand("Copy"); //执行浏览器复制命令
+        //    //alert("复制成功");
+        //});
+        function myFunction(txt) {
+            //var 
+            //alert("你粘贴了文本!" + txt);
+        }
     });
     </script>
 </body>

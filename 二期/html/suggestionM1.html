@@ -336,11 +336,6 @@
             <p class="weui_toast_content">已完成</p>
         </div>
     </div>
-    <button class="ccc">button</button>
-    <input type="text" class="bbb" value="" />
-     <div id="show" style="position:fixed;bottom:0;height:100px;border:1px solid #ccc;background:#f00;width:100px;z-index:4;display:none;">
-         <textarea style="height:200px;width:100%;"></textarea>
-     </div>
 
     <script>
 
@@ -357,13 +352,15 @@
     var confirmDelFn = function(){
         $(".zjMask").show();
         $('.zjMsg').show();
+        $("body").addClass('no-scroll');
     };
     var cancelDelFn = function(){
         $(".zjMask").hide();
         $('.zjMsg').hide();
+        $("body").removeClass('no-scroll');
     };
     var delFn = function(){
-        location.href.refresh();
+        //location.href.refresh();
     };
     //设置长按回复删除
     $('.sug-list_right_replayContent').longPress(function (obj) {
@@ -373,15 +370,6 @@
     });
         //cq
    
-    $('.ccc').on('click', function () {
-        //e.preventDefault();
-        $('input.bbb').trigger('focus');
-    });
-    $('input.bbb').focus(function () {
-
-        $("body").addClass('no-scroll');
-        $(".zjMask,#show").show();
-    });
     </script>
 </body>
 

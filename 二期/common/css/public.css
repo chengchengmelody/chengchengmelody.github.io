@@ -456,7 +456,7 @@ i {
     display: inline-block;
     padding-top: 2rem;
     background: #fff;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.4rem solid #eee;
 }
 
 .sug-list_left_userImage{
@@ -1861,7 +1861,7 @@ p.mmpt-return a:first-child {
 }
 .sug-list-line1_title{
    float:left;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color:#333333;
 }
 .sug-list-line1_del{
@@ -1878,6 +1878,7 @@ p.mmpt-return a:first-child {
     width:82%;
     font-size:1.2rem;
     float:left;
+    position:relative;
 }
 .sug-list-line2_img{
     width:1rem;
@@ -1900,6 +1901,7 @@ p.mmpt-return a:first-child {
 }
 .sug-list-line4{
     margin:1.4rem 0;
+    border-bottom: 1px solid #eee;
 }
 .sug-list-line4_img{
     width:8rem;
@@ -1923,8 +1925,9 @@ p.mmpt-return a:first-child {
     height:auto;
     text-align:center;
     border-radius:1.3rem;
-    position:absolute;
+    position:fixed;
     display:none;
+    z-index:3;
 }
 .zjMsg_title{
     line-height:2.2rem;
@@ -1954,6 +1957,8 @@ p.mmpt-return a:first-child {
 }
 .zjMsg_cancel{
     color:#b6b6b6;
+    border-right:1px solid #b6b6b6;
+    width:49%;
 }
 .zjMsg_ok{
     color:#3190E8;
@@ -1961,6 +1966,7 @@ p.mmpt-return a:first-child {
 .sug-list_left_replay{
     color:#b6b6b6;
     font-size:1.4rem;
+    line-height: 2.4rem;
 }
 .sug-list_right_replayContent{
     color:#333333;
@@ -1968,6 +1974,8 @@ p.mmpt-return a:first-child {
     width: 95%;
     margin-right: 5%;
     font-size:1.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
 }
 .sug-detail{
     margin:2rem 0;
@@ -2024,7 +2032,7 @@ p.mmpt-return a:first-child {
 
 .delReplay_txt{
     line-height:2.5rem;
-    font-size:1.6rem;
+    font-size:1.2rem;
     color:white;
     background: #292929;
     border-radius: .4rem;
@@ -2045,7 +2053,10 @@ p.mmpt-return a:first-child {
 
 
 /*cq*/
-.sug1 {
+.clearfix,.clearfix:after {
+clear:both;
+}
+.marT40 {
 margin-top:40px;
 }
 .p-fix {
@@ -2100,4 +2111,44 @@ z-index:2;
     z-index: 1;
     background: #000;
     opacity:0.3;
+}
+.list_right_tex {
+    border: 0;
+    resize: none;
+    background: #f7f7f7;
+    height: 5.2rem;
+    width: 95%;
+    padding: 1rem;
+    box-sizing:border-box;
+    display:block;
+    font-size:1.4rem;
+
+}
+.list_right_tex:focus {
+    border: 0;
+}
+.send_btn {
+    float: right;
+    margin-right: 5%;
+    background: #3190E8;
+    padding: 0.5rem 2.3rem;
+    border-radius:2px;
+    color:#fff;
+        margin-top:1.5rem;
+    margin-bottom:1.5rem;
+    font-size:1.4rem;
+
+}
+.niCheng {
+    font-size: 1.6rem;
+    color: #3190E8;
+    padding: 1.2rem 0 0.5rem 0;
+}
+.sug-list-line3 p {
+line-height:2rem;
+}
+.delReplay_txt .copy {
+    margin-right: 0.5rem;
+        border-right: 1px solid #6b6161;
+    padding-right: 0.5rem;
 }
