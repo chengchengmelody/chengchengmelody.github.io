@@ -1901,7 +1901,6 @@ p.mmpt-return a:first-child {
 }
 .sug-list-line4{
     margin:1.4rem 0;
-    border-bottom: 1px solid #eee;
 }
 .sug-list-line4_img{
     width:8rem;
@@ -1976,6 +1975,7 @@ p.mmpt-return a:first-child {
     font-size:1.4rem;
     line-height: 2.4rem;
     margin-bottom: 2rem;
+    border-top: 1px solid #eee;
 }
 .sug-detail{
     margin:2rem 0;
@@ -2053,6 +2053,11 @@ p.mmpt-return a:first-child {
 
 
 /*cq*/
+.clearfix:before,
+.clearfix:after {
+content: " ";
+  display: table;
+}
 .clearfix,.clearfix:after {
 clear:both;
 }
@@ -2151,4 +2156,16 @@ line-height:2rem;
     margin-right: 0.5rem;
         border-right: 1px solid #6b6161;
     padding-right: 0.5rem;
+}
+.reply_contnt {
+    display:none;
+}
+    .reply_contnt .sug-list_left_replay {
+    margin-top:1.5rem;
+    }
+.reply_contnt .sug-list_right hr{
+    margin-bottom: 1rem;
+    width: 95%;
+    border: 0;
+    border-top: 1px solid #eee;   
 }

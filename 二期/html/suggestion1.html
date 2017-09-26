@@ -59,7 +59,7 @@
             <div>
                 <ul class="sug-list">
                     <li>
-                        <div>
+                        <div class="clearfix">
                             <div class="sug-list_left">
                                 <img class="sug-list_left_userImage" src="../common/images/icon/calendar_icon.png" />
                             </div>
@@ -100,24 +100,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="clearfix">
                             <div class="sug-list_left">
                                 <p class="sug-list_left_replay">回复:</p>
                             </div>
                             <div class="sug-list_right">
                                 <div class="delReplay" >
-                                    <p class="delReplay_txt"><span class="copy">复制</span><span>删除</span></p>
+                                    <p class="delReplay_txt">删除</p>
                                     <span class="delReplay_triangle"></span>
                                 </div>
                                 <p class="sug-list_right_replayContent" contenteditable="true">非常感谢您的建议，我们以后会更加努力，为大家提供更好的服务！</p>
                             </div>
                         </div>
                          <!-- add content -->
-                        <div class="clearfix">
+                        <button class="click_btn">点我</button>
+                        <div class="reply_contnt clearfix">
                             <div class="sug-list_left">
                                 <p class="sug-list_left_replay">回复:</p>
                             </div>
                             <div class="sug-list_right">
+                                <hr />
                                 <textarea class="list_right_tex" placeholder="请输入内容"></textarea>
                                 <div class="send_btn clearfix">发送</div>
                             </div>                            
@@ -170,9 +172,25 @@
                                 <p class="sug-list_left_replay">回复:</p>
                             </div>
                             <div class="sug-list_right">
-                                <p class="sug-list_right_replayContent">非常感谢您的建议，我们以后会更加努力，为大家提供更好的服务！</p>
+                                <div class="delReplay" >
+                                    <p class="delReplay_txt">删除</p>
+                                    <span class="delReplay_triangle"></span>
+                                </div>
+                                <p class="sug-list_right_replayContent" contenteditable="true">非常感谢您的建议，我们以后会更加努力，为大家提供更好的服务！</p>
                             </div>
+                            <div class="clearfix"></div>
                         </div>
+                         <!-- add content -->
+                        <div class="reply_contnt clearfix">
+                            <div class="sug-list_left">
+                                <p class="sug-list_left_replay">回复:</p>
+                            </div>
+                            <div class="sug-list_right">
+                                <textarea class="list_right_tex" placeholder="请输入内容"></textarea>
+                                <div class="send_btn clearfix">发送</div>
+                            </div>                            
+                        </div>
+                        <!-- add content end -->
                     </li>
                     <li>
                         <div>
@@ -215,14 +233,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                       <div>
                             <div class="sug-list_left">
                                 <p class="sug-list_left_replay">回复:</p>
                             </div>
                             <div class="sug-list_right">
-                                <p class="sug-list_right_replayContent">非常感谢您的建议，我们以后会更加努         力，为大家提供更好的服务！</p>
+                                <div class="delReplay" >
+                                    <p class="delReplay_txt">删除</p>
+                                    <span class="delReplay_triangle"></span>
+                                </div>
+                                <p class="sug-list_right_replayContent" contenteditable="true">非常感谢您的建议，我们以后会更加努力，为大家提供更好的服务！</p>
                             </div>
                         </div>
+                         <!-- add content -->
+                        <div class="reply_contnt clearfix">
+                            <div class="sug-list_left">
+                                <p class="sug-list_left_replay">回复:</p>
+                            </div>
+                            <div class="sug-list_right">
+                                <textarea class="list_right_tex" placeholder="请输入内容"></textarea>
+                                <div class="send_btn clearfix">发送</div>
+                            </div>                            
+                        </div>
+                        <!-- add content end -->
 
                     </li>
                 </ul>
@@ -308,22 +341,26 @@
             value: 4
         }]
     });
-    $(function() {
+    $(function () {
+        //点击回复框
+        $(".click_btn").click(function () {
+            $(this).next(".reply_contnt").show();
+        });
+        //点击回复框end
         $(".sug-write").click(function() {
             $('.home-ul li:last-child').siblings().removeClass('active').end().addClass('active');
             $('.sug2').siblings().hide().end().show();
         });
-
     });
     var confirmDelFn = function () {
         $(".zjMask").show();
         $('.zjMsg').show();
-        $("body").addClass('no-scroll');
+        //$("body").addClass('no-scroll');
     };
     var cancelDelFn = function () {
         $(".zjMask").hide();
         $('.zjMsg').hide();
-        $("body").removeClass('no-scroll');
+        //$("body").removeClass('no-scroll');
     };
     var delFn = function(){
         location.href.refresh();
@@ -369,24 +406,6 @@
             arr[_index].open(_imgindex);
         });
 
-        //设置长按回复删除
-        $('.sug-list_right_replayContent').longPress(function (obj) {
-            $(obj).parent().find('.delReplay').show();
-            $(obj).css("background", "#dfdfdf");
-            //console.log("提交删除请求" + $(obj).html());
-            //$(obj).blur();
-        });
-        //
-        //$(".copy").click(function () {
-        //    var e = $(this).parent().parent().find("p.sug-list_right_replayContent");
-        //    e.select(); //选择对象
-        //    document.execCommand("Copy"); //执行浏览器复制命令
-        //    //alert("复制成功");
-        //});
-        function myFunction(txt) {
-            //var 
-            //alert("你粘贴了文本!" + txt);
-        }
     });
     </script>
 </body>
