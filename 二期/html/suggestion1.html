@@ -392,7 +392,8 @@
         //列表详情
         $(".niCheng").click(function () {
             $("body,html").addClass('no-scroll');
-            $('.weui-popup__overlay1').on('touchmove', function (e) { e.preventDefault(); }, false);
+            $(".weui-popup__overlay1").on('touchmove', function (event) { event.preventDefault(); }, false);
+            $("..weui-popup__overlay1").unbind('touchmove');
             $(".prop_close").show();
         });
         $(".prop_close").click(function () {
