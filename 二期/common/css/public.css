@@ -2288,3 +2288,6 @@ opacity: 0.26;
    width:3.2rem;
     height:3.2rem;
 }
+.weui-photo-browser-modal.weui-photo-browser-modal-visible {
+    opacity: 0.5;
+}
