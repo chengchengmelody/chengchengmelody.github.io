@@ -2210,8 +2210,7 @@ opacity: 0.26;
     width: 100%;
     height: 100%;
     z-index: 10;
-    background:#000;
-    /*background: rgba(0,0,0,0.26);*/
+    background: rgba(0,0,0,0.26);
     -webkit-transition: opacity .3s;
     transition: opacity .3s;
 }
@@ -2238,10 +2237,10 @@ opacity: 0.26;
 .sug_deProp p.title{
     width: 94%;
     overflow: hidden;
-    height: 2rem;
-    white-space:nowrap;
-    display:block;
     text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 .sug_dePropDow{
     padding:0 1.4rem 2.5rem;
@@ -2272,7 +2271,7 @@ opacity: 0.26;
     line-height: 1.7rem;
     padding-top: 0.6rem;
     padding-left: 1.5rem;
-    margin:0.6rem -0.8rem 0.6rem 0.8rem;
+    margin:0.6rem -0.2rem 0.6rem 0.8rem;
     border-left:2px solid #D6E7FE;
     min-height:5.1rem;
 }
