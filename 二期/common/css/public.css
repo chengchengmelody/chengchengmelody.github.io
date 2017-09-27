@@ -2211,7 +2211,7 @@ opacity: 0.26;
     height: 100%;
     z-index: 10;
     background: rgba(0,0,0,0.26);
-    opacity: 0.26;
+    opacity: 0.5;
     -webkit-transition: opacity .3s;
     transition: opacity .3s;
 }
@@ -2274,4 +2274,17 @@ opacity: 0.26;
     margin:0.6rem -0.8rem 0.6rem 0.8rem;
     border-left:2px solid #D6E7FE;
     min-height:5.1rem;
+}
+.prop_close {
+    position: absolute;
+    width:3.2rem;
+    height:3.2rem;
+    z-index:100;
+        margin-top: 1.65rem;
+        left:50%;
+        margin-left:-1.6rem;
+}
+.prop_close img{
+   width:3.2rem;
+    height:3.2rem;
 }

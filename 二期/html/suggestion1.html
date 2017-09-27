@@ -364,10 +364,14 @@
                 </ul>
             </div>
             <div class="sug-detail-userAct">
-    <div class="sug-detail-userAct_done">已解决，返回列表</div>
-    <div class="sug-detail-userAct_undo">未解决，继续提问?</div>
-</div>
+                <div class="sug-detail-userAct_done">已解决，返回列表</div>
+                <div class="sug-detail-userAct_undo">未解决，继续提问?</div>
+            </div>
         </div>
+        <div class="prop_close">
+                <a href="javascript:;" class="close-popup">
+                    <img src="../common/images/product/close_btn.png" /></a>
+            </div>
     </div>
     <!-- 列表详情 end-->
     <script>
@@ -387,13 +391,18 @@
     $(function () {
         //列表详情
         $(".niCheng").click(function () {
-        $("body").addClass('no-scroll');
+            $("body").addClass('no-scroll');
+            $(".prop_close").show();
+        });
+        $(".prop_close").click(function () {
+            $("body").removeClass('no-scroll');
+            $(this).hide();
         });
         var weui_popup_modalH = $(window).height() / 100 * 83;
         var sug_dePropH = $(".sug_deProp").height();
         var sug_detail_userActlH = $(".sug-detail-userAct").height();
-        
-        $(".sug_dePropDow").height(weui_popup_modalH - 2*sug_detail_userActlH - sug_dePropH-20);
+        $(".sug_dePropDow").height(weui_popup_modalH - 2 * sug_detail_userActlH - sug_dePropH - 20);
+        //列表详情end
         //点击回复框
         $(".click_btn").click(function () {
             $(this).next(".reply_contnt").show();
