@@ -391,11 +391,11 @@
     $(function () {
         //列表详情
         $(".niCheng").click(function () {
-            $("body").addClass('no-scroll');
+            $("body,html").addClass('no-scroll');
             $(".prop_close").show();
         });
         $(".prop_close").click(function () {
-            $("body").removeClass('no-scroll');
+            $("body,html").removeClass('no-scroll');
             $(this).hide();
         });
         var weui_popup_modalH = $(window).height() / 100 * 83;
