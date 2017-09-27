@@ -2211,7 +2211,6 @@ opacity: 0.26;
     height: 100%;
     z-index: 10;
     background: rgba(0,0,0,0.26);
-    opacity: 0.5;
     -webkit-transition: opacity .3s;
     transition: opacity .3s;
 }
@@ -2244,9 +2243,10 @@ opacity: 0.26;
     text-overflow:ellipsis;
 }
 .sug_dePropDow{
-    padding:2.5rem 1.4rem;
+    padding:0 1.4rem 2.5rem;
     overflow: auto;
     box-sizing: border-box;
+    margin-top:2.5rem;
 }
 .sug_dePropDow .li_cnt .li_cnt_p span.li_cnt_type {
     width: 1.6rem;
@@ -2280,9 +2280,9 @@ opacity: 0.26;
     width:3.2rem;
     height:3.2rem;
     z-index:100;
-        margin-top: 1.65rem;
-        left:50%;
-        margin-left:-1.6rem;
+    margin-top: 1.2rem;
+    left:50%;
+    margin-left:-1.6rem;
 }
 .prop_close img{
    width:3.2rem;
