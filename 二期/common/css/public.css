@@ -1993,15 +1993,20 @@ p.mmpt-return a:first-child {
 }
 .sug-detail-userAct{
     text-align: center;
-    margin-top:3rem;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    margin-left: -7rem;
+    height:5.6rem;
 }
 .sug-detail-userAct_done{
     color:#3190E8;
-    width:17.1rem;
     display:inline-block;
-    line-height:3.8rem;
     border:1px solid #3190E8;
     font-size:1.4rem;
+    border-radius: 10rem;
+    padding:0.7rem 2.3rem;
+    line-height:2rem;
 }
 .sug-detail-userAct_undo{
     color:#FC3304;
@@ -2168,4 +2173,105 @@ line-height:2rem;
     width: 95%;
     border: 0;
     border-top: 1px solid #eee;   
+}
+.weui-popup__overlay {
+background: rgba(0,0,0,0.26);
+opacity: 0.26;
+}
+.weui-popup__modal {
+    width: 90%;
+    margin-left: 5%;
+    background: #fff;
+    height: 83%;
+    margin-top: 40px;
+    bottom: initial;
+    border-radius: 1.4rem;
+        position: relative;
+}
+.sug_deProp{
+    height: 12.4rem;
+    background: #3190E8;
+        overflow: hidden;
+}
+    .sug_deProp .logo {
+    width: 35%;
+    text-align: center;
+    padding-top: 3.8rem;
+    }
+    .sug_deProp .sug-list_left_userImage {
+    width:5rem;
+    height:5rem;
+    }
+.weui-popup__overlay1 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(0,0,0,0.26);
+    opacity: 0.26;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+.sug_deProp .decrip {
+    width:65%;
+    padding:3.5rem 0 2rem;
+    color:#fff;
+    font-size:1.4rem;
+}
+.sug_deProp p {
+    line-height:2rem;
+}
+.sug_deProp p.last {
+    font-size:1rem;
+}
+.sug_deProp p.last span{
+    margin-right:0.6rem;
+}
+.sug_deProp p.last span.service{
+   background:url(../images/product/label_icon_white.png) no-repeat left;
+   background-size:contain;
+   padding-left:2rem;
+}
+.sug_deProp p.title{
+    width: 94%;
+    overflow: hidden;
+    height: 2rem;
+    white-space:nowrap;
+    display:block;
+    text-overflow:ellipsis;
+}
+.sug_dePropDow{
+    padding:2.5rem 1.4rem;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.sug_dePropDow .li_cnt .li_cnt_p span.li_cnt_type {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-block;
+    background: #589FFD;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+    .sug_dePropDow .li_cnt.li_cnt_rellay .li_cnt_p span.li_cnt_type {
+   background: #29C635;
+    }
+.sug_dePropDow .li_cnt_p span{
+    font-size:1rem;
+    color:#cacaca;
+    margin-right:0.8rem;
+}
+.sug_dePropDow .li_cnt_a {
+    font-size: 1.2rem;
+    color: #7B7B7B;
+    line-height: 1.7rem;
+    padding-top: 0.6rem;
+    padding-left: 1.5rem;
+    margin:0.6rem -0.8rem 0.6rem 0.8rem;
+    border-left:2px solid #D6E7FE;
+    min-height:5.1rem;
 }
