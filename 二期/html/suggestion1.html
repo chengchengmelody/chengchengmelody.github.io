@@ -398,7 +398,7 @@
             $("body,html").removeClass('no-scroll');
             $(this).hide();
         });
-        $('#sug_detailList,.weui-popup__overlay1').bind("touchmove", function (e) {
+        $('.weui-popup__overlay1').bind("touchmove", function (e) {
             e.preventDefault();
         });
         var weui_popup_modalH = $(window).height() / 100 * 83;
