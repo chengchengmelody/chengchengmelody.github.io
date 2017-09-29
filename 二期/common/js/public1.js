@@ -40,23 +40,33 @@ $(function () {
         }
         var liHeight = $(".tea .tea-right ul li").height()*2;
         var sContainter = $(".detail").height();
-        if (top > liHeight) {//轮播图上划消失
-            $(".detail").slideUp(1000);
-            $(".tea").height(totalH - h1 - h2 - h3);
-            $(".supper-bak").hide();
-            $(".supper-fix").css("position", "relative");
-            $(".supper-title").css({ "position": "relative", "background-color": "#3190E8", "opacity": 1 });
-           
-        } else if (top == 0) {
-            $('.detail').stop(false).slideDown(1000, function () {
-                $(".tea").height(totalH - h4 - h2 - h3);
-            });
-            $(".supper-bak").show();
-            $(".supper-fix").css("position", "absolute");
-            $(".supper-title").css({ "position": "relative", "background": "none" });
+        var detailLength = $(".detail").length;
+        if (detailLength) {
+            if (top > liHeight) {//轮播图上划消失
+                $(".detail").slideUp(1000);
+                $(".tea").height(totalH - h1 - h2 - h3);
+                $(".supper-bak").hide();
+                $(".supper-fix").css("position", "relative");
+                $(".supper-title").css({ "position": "relative", "background-color": "#3190E8", "opacity": 1 });
+
+            } else if (top == 0) {//页面顶部，轮播图出现
+                $('.detail').stop(false).slideDown(1000, function () {
+                    $(".tea").height(totalH - h4 - h2 - h3);
+                });
+                $(".supper-bak").show();
+                $(".supper-fix").css("position", "absolute");
+                $(".supper-title").css({ "position": "relative", "background": "none" });
+            }
         }
     });
     //右侧滚动，左侧菜单联动
+    var detailLength = $(".detail").length;
+    if (!detailLength) {
+        $(".tea").height(totalH - h1 - h2 - h3);
+        $(".supper-bak").hide();
+        $(".supper-fix").css("position", "relative");
+        $(".supper-title").css({ "position": "relative", "background-color": "#3190E8", "opacity": 1 });
+    }
 });
 
 // 正在加载中

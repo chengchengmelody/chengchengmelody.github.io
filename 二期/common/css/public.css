@@ -1916,6 +1916,7 @@ p.mmpt-return a:first-child {
     position:fixed;
     display:none;
     z-index:3;
+    overflow:hidden;
 }
 .zjMsg{
     background:white;
