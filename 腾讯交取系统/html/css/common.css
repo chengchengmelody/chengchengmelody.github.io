@@ -5,7 +5,7 @@ em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd,
 ol, ul, li,fieldset, form, label, legend,table, caption, tbody, 
 tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption, 
 figure, footer, header, hgroup, menu, nav, section, summary,time, mark, 
-audio, video {
+audio, video,input,button {
     margin:0;
     padding:0;
     border:0;
@@ -15,7 +15,9 @@ audio, video {
     outline-style:none;  
     font-family:'PingFang SC', 'Helvetica Neue', 'Helvetica', 'Microsoft Yahei', "微软雅黑", STHeiti, "华文细黑", 'STHeitiSC-Light', 'Arial', 'Hiragino Sans GB', sans-serif;
 }
-
+ul,li{
+  list-style: none;
+}
 body {
     line-height:1;
 }
@@ -119,7 +121,7 @@ body,html{
   height: auto;
 }
 .sub-con{
-  width: 44.2rem;
+  width: 86%;
   margin:0 auto;
   font-size: 0.75rem;
 }
