@@ -1,0 +1,20 @@
+/*receptionist*/
+.recep-con {padding:0 2rem;}
+.reTitle-left {border-left:3px solid #6EBAFF;padding-left:0.4rem;font-size:0.9rem;margin-top: 0.3rem;}
+.reTitle-right {font-size: 0.7rem;color: #ACACAC;}
+.reTitle-right a{color: #ACACAC;line-height:1.5rem;}
+.reTitle-right a span{display:block;float:left;}
+.reTitle-right a span:last-child{width:1.5rem;height:1.5rem;}
+.recep-list {padding-top:2.8rem;}
+.recep-item {padding:1.4rem 0 1rem;border-bottom:2px solid #F1F1F1;}
+.recep-item li{min-width:14.6%;font-size: 0.8rem;color: #6EBAFF;padding:1.45rem 1.65rem;border: 1px solid #6EBAFF;border-radius: 4px;float:left;margin-right:1.3%;margin-bottom:2rem;text-align: center;}
+.recep-item li.recep-itemList span{background:url(../images/arrow_blue_btn.png) no-repeat right 0;padding-right:20px;}
+.recep-yellow .reTitle-left {border-left-color:#FFA94A;}
+.recep-yellow .recep-item li{border-color:#FFA94A;color:#FFA94A;}
+.recep-yellow .recep-item li.recep-itemList span{background:url(../images/arrow_yellow_btn.png) no-repeat right 0;}
+.recep-btn{text-align:center;}
+.recep-btn span {display:inline-block;padding:0.6rem 4.2rem;border-radius: 4px;color:#fff;margin:2.8rem 0;cursor:pointer;}
+.recep-btn span:first-child {margin-right:0.9rem;}
+.recep-btn span.cancel {border:1px solid #4FA3FF;color:#4FA3FF;}
+.recep-btn span.yes {background-image: linear-gradient(0deg, #007AFF 0%, #4FA3FF 100%);}
+
