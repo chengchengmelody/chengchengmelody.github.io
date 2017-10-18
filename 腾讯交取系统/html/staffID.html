@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tencent腾讯-登录页面</title>
+	<title>Tencent腾讯-识别员工身份</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/> 
 	<link type="text/css" rel="stylesheet"  href="css/common.css"/>
 	<link type="text/css" rel="stylesheet"  href="css/login.css"/>
@@ -27,29 +27,19 @@
 		<!-- 中间内容 --> 
 		<div class="sub-con">
 			<div class="middle login-con">
-				<p class="login-logo"></p>
-				<div class="login-w">
-					<div class="login-l">
-						<ul>
-							<li>
-								<input type="text" placeholder="请输入用户名……">
-							</li>
-							<li>
-								<input type="text" placeholder="请输入密码……">
-							</li>
-							<li>
-								<input type="button" value="登录" class="btnLogin">
-							</li>
-							<li>
-								<p class="tog">切换至Outlook/QCS密码验证</p>
-							</li>
-						</ul>
-					</div>
-					<div class="login-r">
-						<img src="images/wx.png">
-						<p class="o1">使用MOA3.2以上版本</p>
-						<p class="o2">扫描二维码登录</p>
-					</div>
+				<div class="staff">
+					<p>
+						<span>申请人：</span>
+						<input type="text" class="staff-input" placeholder="请输入申请人账号、英文名、分机号或手机号">
+					</p>
+					<p>
+						<span>委托人：</span>
+						<input type="text" class="staff-input" placeholder="请输入委托人账号、英文名、分机号或手机号">
+					</p>
+					<p>
+						<input type="button" class="staff-btn1" value="重置">
+						<input type="button" class="staff-btn2" value="确认">
+					</p>
 				</div>
 			</div>
 			<div class="middle">
