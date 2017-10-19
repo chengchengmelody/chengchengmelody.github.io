@@ -116,6 +116,10 @@ body,html{
   text-align: right;
 }
  
+.no-scroll {
+    height:100%;
+    overflow: hidden;
+}
 .contain{
   width: 100%;
   height: auto;
