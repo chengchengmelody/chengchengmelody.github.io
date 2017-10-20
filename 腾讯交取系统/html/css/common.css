@@ -5,7 +5,7 @@ em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd,
 ol, ul, li,fieldset, form, label, legend,table, caption, tbody, 
 tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption, 
 figure, footer, header, hgroup, menu, nav, section, summary,time, mark, 
-audio, video,input,button {
+audio, video,input,button,textarea{
     margin:0;
     padding:0;
     border:0;
@@ -37,14 +37,13 @@ a{
 }
 a:hover,a:focus{
     text-decoration:none;
-    bblr:expression(this.onFocus=this.blur());/*IE*/
-    outline-style:none;/*FF*/ 
-    }
+    bblr:expression(this.onFocus=this.blur());
+    outline-style:none;
+}
 table {
     border-collapse:collapse;
     border-spacing:0;
 }
- 
 input, select {
     vertical-align:middle;
 } 
@@ -58,7 +57,6 @@ input, select {
     clear: both;
 }
 .clearfix:after{clear:both;} 
-
 html {
   font-size: 20px;
 }
@@ -98,7 +96,7 @@ html {
   }
 }
 /*初始化*/ 
-body,html{ 
+html{ 
   background: #E8F3FF url(../images/background@2x.png) no-repeat 0 bottom;
   background-size: 100% 100%;
   min-height: 100%;

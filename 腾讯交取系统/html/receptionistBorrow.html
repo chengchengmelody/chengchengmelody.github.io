@@ -30,7 +30,6 @@
 				<div class="recep-list recep-blue">
                     <div class="clearfix">
                         <div class="left reTitle-left">借/取产品</div>
-                        <div class="right reTitle-right"><a href="javascript:void(0);"><span>显示全部借/取</span><span><img src="images/arrow_right.png" /></span></a></div>
 				    </div>
                     <div class="recep-item">
                         <ul class="clearfix">
@@ -145,7 +144,7 @@
                     </div>
                 <div class="back-btn">
                     <p class="back-cancel">取消</p>
-                    <p class="back-ok">确定</p>
+                    <p class="back-ok" id="recepOk">确定</p>
                 </div>
         </div>
 	</div>
@@ -172,6 +171,10 @@
         $(".back-btn p").click(function () {
             $(".back,.back-cnt").hide();
             $("body").removeClass('no-scroll');
+        });
+        // 区域确定按钮
+        $("#recepOk").on("click",function(){
+            window.location.href="billList.html";
         });
     </script>
 </body>
