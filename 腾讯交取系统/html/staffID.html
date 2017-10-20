@@ -28,18 +28,53 @@
 		<div class="sub-con">
 			<div class="middle login-con">
 				<div class="staff">
-					<p>
+					<div class="staff-line">
 						<span>申请人：</span>
 						<input type="text" class="staff-input" placeholder="请输入申请人账号、英文名、分机号或手机号">
-					</p>
-					<p>
+						<em class="login-clear"></em>
+						<div class="staff-sel">
+							<img src="images/user.jpg">
+							<div class="sel1">
+								wangfeng (王峰)
+							</div>
+							<div class="sel2">
+								s3/人力资源平台部
+							</div>
+						</div>
+						<!-- 用户查询 -->
+						<div class="staff-search">
+							<ul>
+								<li>v_hfengwang(王峰)</li>
+								<li>v_hfengwang(王峰)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="staff-line">
 						<span>委托人：</span>
 						<input type="text" class="staff-input" placeholder="请输入委托人账号、英文名、分机号或手机号">
-					</p>
-					<p>
-						<input type="button" class="staff-btn1" value="重置">
+						<em class="login-clear"></em>
+						<div class="staff-sel">
+							<img src="images/user.jpg">
+							<div class="sel1">
+								wangfeng (王峰)
+							</div>
+							<div class="sel2">
+								s3/人力资源平台部
+							</div>
+						</div>
+						<!-- 用户查询 -->
+						<div class="staff-search">
+							<ul>
+								<li>v_hfengwang(王峰)</li>
+								<li>v_hfengwang(王峰)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="staff-line">
+						<span></span>
+						<input type="button" class="staff-btn1" id="btnReset" value="重置">
 						<input type="button" class="staff-btn2" value="确认">
-					</p>
+					</div>
 				</div>
 			</div>
 			<div class="middle">
@@ -56,5 +91,36 @@
 			<p>Copyright©1998-2014Tencent All Rights Reserved</p>
 		</footer>
 	</div>
+	<script type="text/javascript">
+		$(function(){
+			// 显示模糊查询框
+			$(".staff-line .staff-input").keyup(function(){
+				var that = $(this); 
+				if(that.val()){
+					that.nextAll(".staff-search").show();
+				} else{
+					that.nextAll(".staff-search").hide();
+				}
+			});
+			// 显示选中的员工
+			$(".staff-search li").on('click', function(){
+				$(this).parents(".staff-search").hide();
+				$(this).parents(".staff-search").prevAll(".staff-sel").show();
+			});
+			// 清空input值
+			$(".login-clear").on('click',function(){
+				$(this).prev().val("");
+				// 清空选中员工
+				// $(this).nextAll(".staff-sel").hide();
+			});
+			// 重置
+			$("#btnReset").on('click',function(){
+				$(".staff-input").val("");
+			});
+			$(".staff-btn2").on('click',function(){
+				window.location.href="receptionist.html";
+			});
+		});
+	</script>
 </body>
 </html>
