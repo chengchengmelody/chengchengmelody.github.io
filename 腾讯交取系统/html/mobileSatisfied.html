@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tencent腾讯</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/> 
+	<link type="text/css" rel="stylesheet"  href="css/common.css"/>
+    <link href="css/mobileSatisfied.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="m-main">
+        <div class="m-star">
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="m-explain">
+            <ul class="clearfix">
+                <li>服务态度好</li>
+                <li>环境很棒</li>
+                <li>办理很快</li>
+                <li>体验一百分</li>
+            </ul>
+        </div>
+        <div class="m-textare">
+            <textarea placeholder="满足你的期待吗？说说我们做得好的和美中不足的地方，还可以抽取礼品哦。"></textarea>
+        </div>
+        <div class="m-btn">
+            <p>提交</p>
+        </div>
+	</div>
+    <script>
+        $(function () {
+            var serverData = [
+                [
+                "服务态度好",
+                "环境很棒",
+                "办理很快",
+                "体验一百分"
+                ],
+                [
+                "服务态度好1",
+                "环境很棒1",
+                "办理很快1",
+                "体验一百分1"
+                ],
+                [
+                "服务态度好2",
+                "环境很棒2",
+                "办理很快2",
+                "体验一百分2"
+                ],
+                 [
+                "服务态度好3",
+                "环境很棒3",
+                "办理很快3",
+                "体验一百分3"
+                 ],
+                  [
+                "服务态度好4",
+                "环境很棒4",
+                "办理很快4",
+                "体验一百分4"
+                  ]
+            ];
+            $(".m-star td").click(function () {
+                var _index = $(this).index();
+                $(this).addClass("active");
+                $(".m-star td:lt(" + _index + ")").addClass("active");
+                $(".m-star td:gt(" + _index + ")").removeClass("active");
+                for (i = 0; i < 4; i++) {
+                    $(".m-explain li").eq(i).text(serverData[_index][i]);
+                }
+            });
+            $(".m-explain li").click(function () {
+                $(this).toggleClass("active");
+            });
+        });
+    </script>
+</body>
+</html>
