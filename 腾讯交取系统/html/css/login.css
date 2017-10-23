@@ -527,7 +527,7 @@ h1.bill-title{
     .staff input[placeholder], .staff [placeholder], .staff *[placeholder] {
 	    font-size: 0.7rem;
 	}
-	..staff-search{
+	.staff-search{
 		width: 3.4rem;
 	}
 }
