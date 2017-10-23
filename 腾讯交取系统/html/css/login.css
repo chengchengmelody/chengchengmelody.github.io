@@ -443,16 +443,20 @@ h1.bill-title{
 .bill-wx{
 	
 }
-.bill-wx-con{
+.bill-wx-w{
 	width: 21rem;
-	height: 20rem;
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	height: 20rem; 
 	margin-top: -10rem;
 	margin-left: -10.5rem;
 	background: #FFFFFF;
-	border-radius: 0.4rem; 
+	border-radius: 0.4rem;
+	position: absolute;
+	top: 50%;
+	left: 50%; 
+}
+.bill-wx-con{
+	width: 21rem;
+	height: 20rem;
 }
 .wx-btn{
 	width: 2.5rem;
@@ -484,12 +488,20 @@ h1.bill-title{
 	font-size: 0.75rem;
 	color: #000000;
 }
+.bill-view-w{
+	width: 21rem;
+	height: 17rem; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -9rem;
+	margin-left: -10.5rem;
+}
 .bill-view-con{
 	width: 21rem;
-	height: 17rem;
+	height: 17rem; 
 	background: #FFFFFF;
-	border-radius: 0.4rem;
-	margin:8.5rem auto 0 auto;
+	border-radius: 0.4rem;   
 }
 .view-wrap{
 	width: 21rem;
