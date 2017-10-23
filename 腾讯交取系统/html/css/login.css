@@ -300,6 +300,8 @@ input::-webkit-input-placeholder {
 .bill-con li .b1{
 	width: 2.5rem;
 	position: absolute;
+	left:0;
+	top: 0;
 	background:#fff;
 	z-index: 99;
 }
@@ -307,6 +309,7 @@ input::-webkit-input-placeholder {
 	width: 4rem;
 	position: absolute;
 	left: 2rem;
+	top: 0;
 	background:#fff;
 	text-align: center;
 	z-index: 99;
