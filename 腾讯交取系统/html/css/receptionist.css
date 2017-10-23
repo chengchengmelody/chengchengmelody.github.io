@@ -43,3 +43,6 @@
 .back-cnt.back-green .recep-item li {border:1px solid #6FD46E;color:#6FD46E;}
 .back-cnt.back-green .recep-item li.active {background:url(../images/green_small_bg.png) no-repeat center center;background-size:cover;color:#fff;}
 
+@media screen and (min-width: 750px) {
+  .recep-item li{min-width:23%;}
+}

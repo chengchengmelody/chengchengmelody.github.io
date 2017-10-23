@@ -18,7 +18,7 @@ audio, video,input,button,textarea{
 ul,li{
   list-style: none;
 }
-input[type="button"], input[type="submit"], input[type="reset"] {
+input[type="button"],input[type="text"], input[type="submit"], input[type="reset"] {
 -webkit-appearance: none;
 }
 textarea {-webkit-appearance: none;outline:none;border:none;} 
