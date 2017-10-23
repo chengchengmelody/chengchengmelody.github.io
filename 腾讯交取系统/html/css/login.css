@@ -253,7 +253,7 @@ input::-webkit-input-placeholder {
 	overflow: hidden; 
 }
 .bill-con ul{
-	min-width: 56rem;
+	min-width: 54rem;
 }
 .bill-con li{
 	width: 100%;
@@ -555,7 +555,7 @@ h1.bill-title{
 }
 .bill2 ul.pos2{
 	padding-left: 5rem;
-	min-width: 91rem;
+	min-width: 88rem;
 }
 
 @media screen and (max-width: 768px) {
