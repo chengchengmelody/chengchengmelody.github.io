@@ -131,6 +131,7 @@ input::-webkit-input-placeholder {
 	float: left;
 	margin-right: 3%;
 	font-size:0.75rem;
+	color: red;
 } 
 .staff input[placeholder],.staff  [placeholder], .staff *[placeholder] { 
 	font-size:0.75rem;
