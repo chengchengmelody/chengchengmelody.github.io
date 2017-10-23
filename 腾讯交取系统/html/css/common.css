@@ -18,11 +18,12 @@ audio, video,input,button,textarea{
 ul,li{
   list-style: none;
 }
-input[type="button"], input[type="submit"], input[type="reset"] {
--webkit-appearance: none;
-box-shadow: none;
-}
-textarea {-webkit-appearance: none;outline:none;border:none;} 
+input, textarea{
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline:none;
+  border:none;
+} 
 input:focus, textarea:focus {
 outline: none;
 } 
