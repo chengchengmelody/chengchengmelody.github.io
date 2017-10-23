@@ -130,8 +130,7 @@ input::-webkit-input-placeholder {
 	padding-left: 2%; 
 	float: left;
 	margin-right: 3%;
-	font-size:0.75rem;
-	color: red;
+	font-size:0.75rem; 
 } 
 .staff input[placeholder],.staff  [placeholder], .staff *[placeholder] { 
 	font-size:0.75rem;
