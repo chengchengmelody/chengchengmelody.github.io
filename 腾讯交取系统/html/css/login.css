@@ -130,10 +130,10 @@ input::-webkit-input-placeholder {
 	float: left;
 	margin-right: 4%;
 	font-size:0.75rem;
-}
-.staff .staff-input::-webkit-input-placeholder{
+} 
+.staff input[placeholder],.staff  [placeholder], .staff *[placeholder] { 
 	font-size:0.75rem;
-}
+} 
 .staff input[type='button']{
 	width: 20%;
 	height: 2.25rem;
