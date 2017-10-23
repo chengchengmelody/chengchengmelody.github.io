@@ -8,19 +8,19 @@
 .recep-list {padding-top:2.8rem;}
 .recep-item {padding:1.4rem 0 1rem;border-bottom:2px solid #F1F1F1;}
 .recep-item li{min-width:18.4%;font-size: 0.8rem;color: #6EBAFF;padding:1.45rem 0;border: 1px solid #6EBAFF;border-radius: 4px;float:left;margin-right:1.3%;margin-bottom:2rem;text-align: center;}
-.recep-item li.recep-itemList span{background:url(../images/arrow_blue_btn.png) no-repeat right;padding-right:20px;}
+.recep-item li.recep-itemList span{background:url(../images/arrow_blue_btn@2x.png) no-repeat right;padding-right:1rem;background-size: 1rem 1rem;}
 .recep-yellow .reTitle-left {border-left-color:#FFA94A;}
 .recep-yellow .recep-item li{border-color:#FFA94A;color:#FFA94A;}
-.recep-yellow .recep-item li.recep-itemList span{background:url(../images/arrow_yellow_btn.png) no-repeat right 0;}
+.recep-yellow .recep-item li.recep-itemList span{background:url(../images/arrow_yellow_btn@2x.png) no-repeat right 0;background-size: 1rem 1rem;}
 .recep-btn{text-align:center;}
 .recep-btn span {display:inline-block;padding:0.6rem 4.2rem;border-radius: 4px;color:#fff;margin:2.8rem 0;cursor:pointer;}
 .recep-btn span:first-child {margin-right:0.9rem;}
 .recep-btn span.cancel {border:1px solid #4FA3FF;color:#4FA3FF;}
 .recep-btn span.yes {background-image: linear-gradient(0deg, #007AFF 0%, #4FA3FF 100%);}
-.recep-list .recep-item li.active {background:url(../images/blue_big_bg.png) no-repeat center center;background-size:cover;color:#fff;}
-.recep-list .recep-item li.recep-itemList.active span{background:url(../images/arrow_white_btn.png) no-repeat right;}
-.recep-list.recep-yellow .recep-item li.active {background:url(../images/yellow_big_bg.png) no-repeat center center;background-size:cover;color:#fff;}
-.recep-list.recep-yellow .recep-item li.recep-itemList.active span{background:url(../images/arrow_white_btn.png) no-repeat right;}
+.recep-list .recep-item li.active {background:url(../images/blue_big_bg@2x.png) no-repeat center center;background-size:cover;color:#fff;}
+.recep-list .recep-item li.recep-itemList.active span{background:url(../images/arrow_white_btn@2x.png) no-repeat right;background-size: 1rem 1rem;}
+.recep-list.recep-yellow .recep-item li.active {background:url(../images/yellow_big_bg@2x.png) no-repeat center center;background-size:cover;color:#fff;}
+.recep-list.recep-yellow .recep-item li.recep-itemList.active span{background:url(../images/arrow_white_btn@2x.png) no-repeat right;background-size: 1rem 1rem;}
 .back {width:100%;height:100%;left: 0;top: 0;background: #000;opacity: .64;position: fixed;display: none;z-index: 3;overflow: hidden;}
 .back-cnt {background: #fff;width: 21rem;height: 17rem;text-align: center;border-radius: 0.4rem;position: fixed;display: none;z-index: 3;left: 0;top: 50%;right: 0;bottom: 0;margin:0 auto;margin-top:-8.5rem;overflow: hidden;}
 .back-title {padding: 1.2rem 0;border-bottom:1px solid #e6e6e6;height:3.65rem; box-sizing: border-box;}
@@ -33,15 +33,15 @@
 .back-btn p.back-cancel{color:#000;border-right:1px solid #e6e6e6;width:49%;}
 .back-btn p.back-ok{color:#2481FC;}
 
-.back-cnt .recep-item li.active {background:url(../images/blue_big_bg.png) no-repeat center center;background-size:cover;color:#fff;}
-.back-cnt .recep-item li.recep-itemList.active span{background:url(../images/arrow_white_btn.png) no-repeat right;}
+.back-cnt .recep-item li.active {background:url(../images/blue_big_bg@2x.png) no-repeat center center;background-size:cover;color:#fff;}
+.back-cnt .recep-item li.recep-itemList.active span{background:url(../images/arrow_white_btn@2x.png) no-repeat right;}
 
 .back-cnt.back-yellow .recep-item li {border:1px solid #FFA94A;color:#FFA94A;}
-.back-cnt.back-yellow .recep-item li.active {background:url(../images/yellow_big_bg.png) no-repeat center center;background-size:cover;color:#fff;}
-.back-cnt.back-yellow .recep-item li.recep-itemList.active span{background:url(../images/yellow_big_bg.png) no-repeat right;}
+.back-cnt.back-yellow .recep-item li.active {background:url(../images/yellow_big_bg@2x.png) no-repeat center center;background-size:cover;color:#fff;}
+.back-cnt.back-yellow .recep-item li.recep-itemList.active span{background:url(../images/yellow_big_bg@2x.png) no-repeat right;}
 
 .back-cnt.back-green .recep-item li {border:1px solid #6FD46E;color:#6FD46E;}
-.back-cnt.back-green .recep-item li.active {background:url(../images/green_small_bg.png) no-repeat center center;background-size:cover;color:#fff;}
+.back-cnt.back-green .recep-item li.active {background:url(../images/green_small_bg@2x.png) no-repeat center center;background-size:cover;color:#fff;}
 
 @media screen and (max-width: 768px) {
   .recep-item li{min-width:23%;}
