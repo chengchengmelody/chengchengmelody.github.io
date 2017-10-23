@@ -151,7 +151,7 @@
     <script>
         $(function () {
             //借取，交还
-            $(".recep-item").delegate("li","click",function(){
+            $(".recep-item li").click(function () {
                 $(this).toggleClass("active");
                 if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-blue")) {
                     $(".back,.back-blue").show();
