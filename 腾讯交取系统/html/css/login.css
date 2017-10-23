@@ -305,7 +305,7 @@ input::-webkit-input-placeholder {
 }
 .bill-con li .b2{
 	width: 4rem;
-	position: fixed;
+	position: absolute;
 	left: 6rem;
 	background:#fff;
 	text-align: center;
