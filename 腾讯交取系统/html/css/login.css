@@ -181,9 +181,9 @@ input::-webkit-input-placeholder {
 	background: #FFFFFF;
 	border: 0.05rem solid #DFDFDF;
 	border-radius: 4px;
-	width: 52%;
+	width: 56%;
 	position: absolute;
-	left: 4.4rem;
+	left: 4.5rem;
 	top: 2.25rem;
 	z-index: 999;
 	display: none;
