@@ -446,9 +446,13 @@ h1.bill-title{
 .bill-wx-con{
 	width: 21rem;
 	height: 20rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -10rem;
+	margin-left: -10.5rem;
 	background: #FFFFFF;
-	border-radius: 0.4rem;
-	margin:9rem auto 0 auto;
+	border-radius: 0.4rem; 
 }
 .wx-btn{
 	width: 2.5rem;
