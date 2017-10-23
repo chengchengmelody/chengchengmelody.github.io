@@ -141,7 +141,7 @@ input::-webkit-input-placeholder {
 	line-height: 2.25rem;
 	text-align: center;
 	font-size: 0.8rem; 
-	padding:0;
+	padding:0; 
 	float: left;
 }
 .staff .staff-btn1{
