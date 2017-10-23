@@ -6,7 +6,7 @@ html,body {background:#fff none;}
 .m-star td {width: 4.5rem;height: 3rem;background: url(../images/star.png) no-repeat;background-size:3rem 3rem;padding-right:1.5rem;}
 .m-star td.active {background: url(../images/star_pre.png) no-repeat;background-size:3rem 3rem;}
 .m-explain {width:94%;margin:0 auto;}
-.m-explain li{width:36.5%;margin:0 6.4%;text-align:center;border: 1px solid #D3D3D3;border-radius: 4px;font-size: 1.5rem;color: #d3d3d3;padding:0.45rem 0;float:left; line-height: 2.1rem;margin-bottom:1.9rem;}
+.m-explain li{width:36.5%;margin:0 6.4%;text-align:center;border: 1px solid #D3D3D3;border-radius: 4px;font-size: 1.5rem;color: #acacac;padding:0.45rem 0;float:left; line-height: 2.1rem;margin-bottom:1.9rem;}
 .m-explain li.active {color: #007AFF;border:1px solid #007AFF;}
 .m-textare textarea{background: #F8F8F8;border-radius: 8px;width:80%;height:22rem;resize:none;margin: 1.2rem auto 4rem;display: block;font-size: 1.4rem;color: #ACACAC;line-height: 2.2rem;padding:1.5rem;}
 
