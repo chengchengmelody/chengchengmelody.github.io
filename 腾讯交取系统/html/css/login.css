@@ -253,6 +253,7 @@ input::-webkit-input-placeholder {
 }
 .bill-con ul{
 	min-width: 54.4rem;
+	position:relative;
 }
 .bill-con li{
 	width: 100%;
@@ -298,7 +299,7 @@ input::-webkit-input-placeholder {
 }
 .bill-con li .b1{
 	width: 2.5rem;
-	position: fixed;
+	position: absolute;
 	background:#fff;
 	z-index: 99;
 }
