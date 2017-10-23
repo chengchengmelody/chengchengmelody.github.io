@@ -30,7 +30,7 @@
 				<div class="staff">
 					<div class="staff-line">
 						<span>申请人：</span>
-						<input type="text" class="staff-input" placeholder="请输入申请人账号、英文名、分机号或手机号">
+						<input type="text" class="staff-input" placeholder="请输入申请人账号、英文名、分机号或手机号" id="applicant">
 						<em class="login-clear"></em>
 						<div class="staff-sel">
 							<img src="images/user.jpg">
@@ -51,7 +51,7 @@
 					</div>
 					<div class="staff-line">
 						<span>委托人：</span>
-						<input type="text" class="staff-input" placeholder="请输入委托人账号、英文名、分机号或手机号">
+						<input type="text" class="staff-input" placeholder="请输入委托人账号、英文名、分机号或手机号" id="client">
 						<em class="login-clear"></em>
 						<div class="staff-sel">
 							<img src="images/user.jpg">
@@ -91,6 +91,10 @@
 			<p>Copyright©1998-2014Tencent All Rights Reserved</p>
 		</footer>
 	</div>
+
+    <!-- 提示框 -->
+    <span class="tip"></span>
+
 	<script type="text/javascript">
 		$(function(){
 			// 显示模糊查询框
@@ -102,23 +106,43 @@
 					that.nextAll(".staff-search").hide();
 				}
 			});
+
 			// 显示选中的员工
 			$(".staff-search li").on('click', function(){
 				$(this).parents(".staff-search").hide();
 				$(this).parents(".staff-search").prevAll(".staff-sel").show();
 			});
+
 			// 清空input值
 			$(".login-clear").on('click',function(){
 				$(this).prev().val("");
 				// 清空选中员工
 				// $(this).nextAll(".staff-sel").hide();
 			});
-			// 重置
+
+			// 重置按钮
 			$("#btnReset").on('click',function(){
 				$(".staff-input").val("");
 			});
+			
+			// 确定按钮
 			$(".staff-btn2").on('click',function(){
-				window.location.href="receptionist.html";
+				var tip = "";
+				var applicant = $("#applicant").val();
+				var client = $("#client").val();
+				if(applicant == ""){
+					tip = "申请人不能为空";
+				} else if(client == "") {
+					tip = "委托人不能为空";
+				}
+				if(tip){
+					$(".tip").html(tip).show(); 
+	            	setTimeout(function(){  
+						$(".tip").hide();         		
+	            	},2000); 					
+				} else{
+					window.location.href="receptionist.html";
+				} 
 			});
 		});
 	</script>

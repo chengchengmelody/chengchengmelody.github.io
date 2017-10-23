@@ -496,3 +496,16 @@ h1.bill-title{
 .view-wrap img{
 	max-width: 100%;
 }
+.tip{
+	text-align: center;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	display: none;
+	font-size: 0.6rem;
+	color: #FFFFFF;
+	padding:0.7rem 1rem;
+	background:#3A3A3A;
+	border-radius: 0.2rem;
+	display: none;
+}

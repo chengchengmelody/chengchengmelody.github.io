@@ -75,7 +75,7 @@
                         </li>
                         <li>
                             <span class="b1"><input type="checkbox" class="chkAll" id="0004"></span>
-                            <span class="b2"><a href="javascript:;">办理领取</a></span>
+                            <span class="b2"><a href="javascript:;">办理归还</a></span>
                             <span class="b3">wynnwang(王艳)</span>
                             <span class="b4">ls(卢山)</span>
                             <span class="b5">13201565657</span>
@@ -193,7 +193,11 @@
                 <img src="images/close_btn@2x.png" id="viewClose" class="wx-btn">
             </p>
         </div>
+
+        <!-- 提示框 -->
+        <span class="tip"></span>
     </div>
+
     <script type="text/javascript">
     $(function() {
         // tab切换
@@ -215,7 +219,7 @@
         });
  
         // 批量领取/归还 按钮操作
-        $(".btnAll, .bill1 .b2 a").on("click", function() {
+        $(".btnAll").on("click", function() {
             var bool = false;
             var chks = $(".bill1 li:gt(0)").find("input");
             for (var i = 0; i < chks.length; i++) {
@@ -224,14 +228,22 @@
                     continue;
                 }
             }
-            if (!bool) {
-                alert("请至少选择一条数据！");
+            if (!bool) { 
+                $(".tip").html("请至少选择一条数据").show(); 
+            	setTimeout(function(){  
+					$(".tip").hide();         		
+            	},2000);            	
             } else {
                 // 批量领取按钮操作
                 $("#write-dialog").show();
             }
         });
 
+        // 行内办理按钮
+        $(".bill1 .b2 a").on("click", function() {
+            $("#write-dialog").show();
+        });
+ 
         // 签名页确定
         $(".writeOk").on("click", function() {
             $("#write-dialog").hide();
@@ -261,6 +273,7 @@
             // 调用列表刷新接口
             // ...
         }
+
     });
     </script>
 </body>
