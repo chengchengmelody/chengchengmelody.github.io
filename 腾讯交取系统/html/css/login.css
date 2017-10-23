@@ -252,7 +252,7 @@ input::-webkit-input-placeholder {
 	overflow: auto;
 }
 .bill-con ul{
-	min-width: 54.4rem;
+	min-width: 55rem;
 }
 .bill-con li{
 	width: 100%;
@@ -350,7 +350,7 @@ input::-webkit-input-placeholder {
 	text-decoration: none;
 }
 .bill-con ul.bill2 {
-    min-width: 89.4rem;
+    min-width: 90rem;
     display: none;
 }
 .bill-con ul.bill2 .b1{
