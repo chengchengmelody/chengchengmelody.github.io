@@ -250,16 +250,13 @@ input::-webkit-input-placeholder {
 	background:#fff;
 	min-height: 17rem;
 	border-radius: 0.2rem;
-	overflow: auto; 
+	overflow: hidden; 
 }
 .bill-con ul{
-	min-width: 56rem;
+	min-width: 52rem;
 }
 .bill-con li{
-	width: 100%;
-	/*height: 2.4rem;*/
-	/*line-height: 2.4rem;*/
-	padding: 0.8rem 0;
+	width: 100%; 
 	font-size: 0.75rem;
 	color: #3F3F3F;
 	border-bottom: 1px solid #F1F1F1;
@@ -276,23 +273,17 @@ input::-webkit-input-placeholder {
 }
 .bill-con li span{
 	display: inline-block; 
-	text-align: center;  
+	text-align: center;   
+	padding: 0rem 0;
+	height: 2.5rem;
+	vertical-align: middle;
+	display: table-cell;
 } 
 .bill-con li.bill-header em{
 	display: block;
 	border-right: 1px solid #E9E9E9;
 	font-style: normal;
-}
-/*.bill-con li.bill-header span::before{
-    content: "";
-    width:1px;
-    height: 1rem; 
-    display: block; 
-    background:#E9E9E9;
-    position: absolute;
-    right:0;
-    top:-0.2rem; 
-}*/
+} 
 .bill-con li input{
 	display: inline-block;
 	width: 0.75rem;
@@ -303,75 +294,62 @@ input::-webkit-input-placeholder {
 .bill-con li.bill-header .b2{
 	background:#F9F9F9;
 }
-.bill-con li .b1{
-	width: 2.5rem;
-	position: absolute;
-	left:0;
-	top: 0.9rem;
-	background:#fff;
-	z-index: 99;
+.bill-con  .b1{
+	width: 2.5rem; 
 }
-.bill-con li .b2{
-	width: 4rem;
-	position: absolute;
-	left: 2rem;
-	top: 0.9rem;
-	background:#fff;
-	text-align: center;
-	z-index: 99;
+.bill-con  .b2{
+	width: 4rem; 
 }
-.bill-con li .b3{
-	width: 8rem;
-	padding-left: 6rem;
+.bill-con  .b3{
+	width: 9rem; 
 }
-.bill-con li .b4{
-	width: 8rem;
-}
-.bill-con li .b5{
-	width: 5rem;
-}
-.bill-con li .b6{
-	width: 8rem;
-}
-.bill-con li .b7{
-	width: 5rem;
-}
-.bill-con li .b8{
-	width: 5rem;
-}
-.bill-con li .b9{
-	width: 8rem;
-}
-.bill-con li .b10{
-	width: 8rem;
-}
-.bill-con li .b11{
+.bill-con  .b4{
 	width: 9rem;
 }
-.bill-con li .b12{
-	width: 8rem;
+.bill-con  .b5{
+	width: 6rem;
 }
-.bill-con li .b13{
+.bill-con .b6{
+	width: 9rem;
+}
+.bill-con  .b7{
+	width: 6rem;
+}
+.bill-con  .b8{
 	width: 5rem;
 }
-.bill-con li a{
+.bill-con  .b9{
+	width: 8rem;
+}
+.bill-con  .b10{
+	width: 8rem;
+}
+.bill-con  .b11{
+	width: 9rem;
+}
+.bill-con  .b12{
+	width: 8rem;
+}
+.bill-con  .b13{
+	width: 5rem;
+}
+.bill-con  a{
 	color: #007AFF;
 	text-decoration: none;
 }
-.bill-con ul.bill2 {
-    min-width: 91rem;
+.bill-con .bill2 { 
     display: none;
 }
-.bill-con ul.bill2 .b1{
+.bill-con .bill2 .b1{
 	width: 5rem;
 	/*-moz-box-shadow:10px 0px 10px #ffffff; 
 	-webkit-box-shadow:10px 0px 10px #ffffff; 
 	box-shadow:10px 0px 10px #ffffff;*/
 }
-.bill-con ul.bill2 .b7{
+.bill-con .bill2 .b7{
 	width: 8rem;
 }
-.bill-con ul.bill2 .b9{
+.bill-con .bill2 .b9{
 	width: 9rem;
 } 
 .bill-btn{
@@ -413,11 +391,15 @@ input::-webkit-input-placeholder {
 }
 .bill-d-con{
 	background: #FFFFFF;
-	border-radius: 0.4rem;
-	width: 26rem;
-	height: 20rem;
-	margin:0 auto;
-	margin-top: 10rem;
+    border-radius: 0.4rem;
+    width: 26rem;
+    height: 20rem;
+    margin: 0 auto;
+    margin-top: -10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -13rem;
 }
 h1.bill-title{
 	font-size: 0.9rem;
@@ -461,12 +443,20 @@ h1.bill-title{
 .bill-wx{
 	
 }
+.bill-wx-w{
+	width: 21rem;
+	height: 20rem; 
+	margin-top: -10rem;
+	margin-left: -10.5rem;
+	background: #FFFFFF;
+	border-radius: 0.4rem;
+	position: absolute;
+	top: 50%;
+	left: 50%; 
+}
 .bill-wx-con{
 	width: 21rem;
 	height: 20rem;
-	background: #FFFFFF;
-	border-radius: 0.4rem;
-	margin:9rem auto 0 auto;
 }
 .wx-btn{
 	width: 2.5rem;
@@ -498,12 +488,20 @@ h1.bill-title{
 	font-size: 0.75rem;
 	color: #000000;
 }
+.bill-view-w{
+	width: 21rem;
+	height: 17rem; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -9rem;
+	margin-left: -10.5rem;
+}
 .bill-view-con{
 	width: 21rem;
-	height: 17rem;
+	height: 17rem; 
 	background: #FFFFFF;
-	border-radius: 0.4rem;
-	margin:8.5rem auto 0 auto;
+	border-radius: 0.4rem;   
 }
 .view-wrap{
 	width: 21rem;
@@ -528,6 +526,36 @@ h1.bill-title{
 	background:#3A3A3A;
 	border-radius: 0.2rem; 
 }
+.bill-con {
+	position: relative;
+}
+.bill-con ul.pos1{
+	position: absolute;
+	left: 0;
+	z-index: 999;
+	background: #fff;
+}
+.bill-wrap{
+	overflow: auto;
+}
+
+.bill1 ul.pos1{
+	min-width:7rem;
+	width:7rem;
+}
+.bill1 ul.pos2{
+	padding-left: 7rem;
+}
+
+.bill2 ul.pos1{
+	min-width:5rem;
+	width:5rem;
+}
+.bill2 ul.pos2{
+	padding-left: 5rem;
+	min-width: 85rem;
+}
+
 @media screen and (max-width: 768px) {
     .staff input[placeholder], .staff [placeholder], .staff *[placeholder] {
 	    font-size: 0.7rem;
