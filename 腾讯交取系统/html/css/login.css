@@ -15,7 +15,7 @@
 .login-w li{
 	padding-bottom: 1rem;
 }
-.login-w input[type='text']{
+.login-w input{
 	border: 1px solid #DFDFDF;
 	border-radius: 0.2rem;
 	width: 15.2rem;
