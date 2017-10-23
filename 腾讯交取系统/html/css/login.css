@@ -131,6 +131,9 @@ input::-webkit-input-placeholder {
 	margin-right: 4%;
 	font-size:0.75rem;
 }
+.staff .staff-input::-webkit-input-placeholder{
+	font-size:0.75rem;
+}
 .staff input[type='button']{
 	width: 20%;
 	height: 2.25rem;
