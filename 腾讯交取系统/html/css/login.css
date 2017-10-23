@@ -259,7 +259,7 @@ input::-webkit-input-placeholder {
 	width: 100%;
 	/*height: 2.4rem;*/
 	/*line-height: 2.4rem;*/
-	padding: 0.8rem 0;
+	/*padding: 0.8rem 0;*/
 	font-size: 0.75rem;
 	color: #3F3F3F;
 	border-bottom: 1px solid #F1F1F1;
@@ -276,7 +276,11 @@ input::-webkit-input-placeholder {
 }
 .bill-con li span{
 	display: inline-block; 
-	text-align: center;  
+	text-align: center;   
+	padding: 0rem 0;
+	height: 2.5rem;
+	vertical-align: middle;
+	display: table-cell;
 } 
 .bill-con li.bill-header em{
 	display: block;
