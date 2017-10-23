@@ -278,7 +278,12 @@ input::-webkit-input-placeholder {
 	display: inline-block; 
 	text-align: center;  
 } 
-.bill-con li.bill-header span::before{
+.bill-con li.bill-header em{
+	display: block;
+	border-right: 1px solid #E9E9E9;
+	font-style: normal;
+}
+/*.bill-con li.bill-header span::before{
     content: "";
     width:1px;
     height: 1rem; 
@@ -287,7 +292,7 @@ input::-webkit-input-placeholder {
     position: absolute;
     right:0;
     top:-0.2rem; 
-}
+}*/
 .bill-con li input{
 	display: inline-block;
 	width: 0.75rem;
@@ -529,5 +534,8 @@ h1.bill-title{
 	}
 	.staff-search{
 		left: 3.4rem;
+	}
+	.bill-con {
+	    min-height: 25rem;
 	}
 }
