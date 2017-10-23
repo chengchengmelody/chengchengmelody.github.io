@@ -104,7 +104,8 @@ input::-webkit-input-placeholder {
 }
 
 .staff{
-	width: 94%;
+	/*width: 94%;*/
+	padding-left: 1rem;
 	margin: 0 auto;
 	color: #919191;
 }
@@ -125,10 +126,10 @@ input::-webkit-input-placeholder {
 	border: 1px solid #DFDFDF;
 	border-radius: 0.2rem;
 	height: 2.25rem;
-	width: 50%;
+	width: 54%;
 	padding-left: 2%; 
 	float: left;
-	margin-right: 4%;
+	margin-right: 3%;
 	font-size:0.75rem;
 } 
 .staff input[placeholder],.staff  [placeholder], .staff *[placeholder] { 
@@ -157,7 +158,7 @@ input::-webkit-input-placeholder {
 
 .staff-sel{
 	float: left;
-	width: 30%;
+	width: 29%;
 	line-height: 1rem;
 	display: none;
 }
@@ -202,7 +203,7 @@ input::-webkit-input-placeholder {
 	background: url(../images/delete_btn@2x.png) no-repeat;
 	background-size: 1.5rem;	
 	position: absolute;
-	left: 58%;
+	left: 63%;
     top: 7px;
 }
 
@@ -249,20 +250,21 @@ input::-webkit-input-placeholder {
 	background:#fff;
 	min-height: 17rem;
 	border-radius: 0.2rem;
-	overflow: auto;
+	overflow: auto; 
 }
 .bill-con ul{
 	min-width: 56rem;
 }
 .bill-con li{
 	width: 100%;
-	height: 2.4rem;
-	line-height: 2.4rem;
+	/*height: 2.4rem;*/
+	/*line-height: 2.4rem;*/
+	padding: 0.8rem 0;
 	font-size: 0.75rem;
 	color: #3F3F3F;
 	border-bottom: 1px solid #F1F1F1;
-	display: block;
-	position:relative;
+	display: block;  
+	position: relative;
 }
 .bill-con li.bill-header{
 	background: #F9F9F9;
@@ -274,9 +276,8 @@ input::-webkit-input-placeholder {
 }
 .bill-con li span{
 	display: inline-block; 
-	text-align: center; 
-	position: relative;
-}
+	text-align: center;  
+} 
 .bill-con li.bill-header span::before{
     content: "";
     width:1px;
@@ -285,7 +286,7 @@ input::-webkit-input-placeholder {
     background:#E9E9E9;
     position: absolute;
     right:0;
-    top:0.7rem; 
+    top:-0.2rem; 
 }
 .bill-con li input{
 	display: inline-block;
@@ -301,7 +302,7 @@ input::-webkit-input-placeholder {
 	width: 2.5rem;
 	position: absolute;
 	left:0;
-	top: 0;
+	top: 0.9rem;
 	background:#fff;
 	z-index: 99;
 }
@@ -309,7 +310,7 @@ input::-webkit-input-placeholder {
 	width: 4rem;
 	position: absolute;
 	left: 2rem;
-	top: 0;
+	top: 0.9rem;
 	background:#fff;
 	text-align: center;
 	z-index: 99;
