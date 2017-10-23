@@ -523,7 +523,7 @@ h1.bill-title{
 	background:#3A3A3A;
 	border-radius: 0.2rem; 
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
     .staff input[placeholder], .staff [placeholder], .staff *[placeholder] {
 	    font-size: 0.7rem;
 	}
