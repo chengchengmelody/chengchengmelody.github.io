@@ -129,7 +129,11 @@ input::-webkit-input-placeholder {
 	padding-left: 2%; 
 	float: left;
 	margin-right: 4%;
-}
+	font-size:0.75rem;
+} 
+.staff input[placeholder],.staff  [placeholder], .staff *[placeholder] { 
+	font-size:0.75rem;
+} 
 .staff input[type='button']{
 	width: 20%;
 	height: 2.25rem;
@@ -176,9 +180,9 @@ input::-webkit-input-placeholder {
 	background: #FFFFFF;
 	border: 0.05rem solid #DFDFDF;
 	border-radius: 4px;
-	width: 50%;
+	width: 52%;
 	position: absolute;
-	left: 4rem;
+	left: 4.4rem;
 	top: 2.25rem;
 	z-index: 999;
 	display: none;
@@ -248,7 +252,7 @@ input::-webkit-input-placeholder {
 	overflow: auto;
 }
 .bill-con ul{
-	min-width: 54.4rem;
+	min-width: 56rem;
 }
 .bill-con li{
 	width: 100%;
@@ -258,6 +262,7 @@ input::-webkit-input-placeholder {
 	color: #3F3F3F;
 	border-bottom: 1px solid #F1F1F1;
 	display: block;
+	position:relative;
 }
 .bill-con li.bill-header{
 	background: #F9F9F9;
@@ -294,14 +299,17 @@ input::-webkit-input-placeholder {
 }
 .bill-con li .b1{
 	width: 2.5rem;
-	position: fixed;
+	position: absolute;
+	left:0;
+	top: 0;
 	background:#fff;
 	z-index: 99;
 }
 .bill-con li .b2{
 	width: 4rem;
-	position: fixed;
-	left: 6rem;
+	position: absolute;
+	left: 2rem;
+	top: 0;
 	background:#fff;
 	text-align: center;
 	z-index: 99;
@@ -345,7 +353,7 @@ input::-webkit-input-placeholder {
 	text-decoration: none;
 }
 .bill-con ul.bill2 {
-    min-width: 89.4rem;
+    min-width: 91rem;
     display: none;
 }
 .bill-con ul.bill2 .b1{
@@ -422,7 +430,13 @@ h1.bill-title{
 	padding:3% 5%;
     width: 90%;
 	height: 10.4rem;
+	font-size:0.75rem;
 }
+.bill-d-con .bill-write textarea[placeholder],
+.bill-d-con .bill-write [placeholder],
+.bill-d-con .bill-write *[placeholder],{
+	font-size:0.75rem;
+} 
 .bill-f{
 	height: 3.75rem;
 	line-height: 3.75rem;
@@ -499,13 +513,12 @@ h1.bill-title{
 .tip{
 	text-align: center;
 	position: fixed;
-	left: 50%;
-	top: 50%;
+	left: 43%;
+	top: 40%;
 	display: none;
 	font-size: 0.6rem;
 	color: #FFFFFF;
 	padding:0.7rem 1rem;
 	background:#3A3A3A;
-	border-radius: 0.2rem;
-	display: none;
+	border-radius: 0.2rem; 
 }
