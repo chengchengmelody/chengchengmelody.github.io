@@ -391,11 +391,15 @@ input::-webkit-input-placeholder {
 }
 .bill-d-con{
 	background: #FFFFFF;
-	border-radius: 0.4rem;
-	width: 26rem;
-	height: 20rem;
-	margin:0 auto;
-	margin-top: 10rem;
+    border-radius: 0.4rem;
+    width: 26rem;
+    height: 20rem;
+    margin: 0 auto;
+    margin-top: -10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -13rem;
 }
 h1.bill-title{
 	font-size: 0.9rem;
