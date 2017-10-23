@@ -432,6 +432,11 @@ h1.bill-title{
 	height: 10.4rem;
 	font-size:0.75rem;
 }
+.bill-d-con .bill-write textarea[placeholder],
+.bill-d-con .bill-write [placeholder],
+.bill-d-con .bill-write *[placeholder],{
+	font-size:0.75rem;
+} 
 .bill-f{
 	height: 3.75rem;
 	line-height: 3.75rem;
