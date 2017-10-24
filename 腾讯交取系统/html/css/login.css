@@ -419,6 +419,8 @@ h1.bill-title{
 	padding:3% 5%;
     width: 90%;
 	height: 10.4rem;
+	max-width: 90%;
+	max-height: 10.4rem;
 	font-size:0.75rem;
 }
 .bill-d-con .bill-write textarea[placeholder],
