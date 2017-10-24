@@ -205,6 +205,7 @@ input::-webkit-input-placeholder {
 	position: absolute;
 	left: 63%;
     top: 7px;
+    display: none;
 }
 
 
