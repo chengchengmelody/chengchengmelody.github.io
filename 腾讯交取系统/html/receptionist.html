@@ -176,28 +176,53 @@
     <script>
         $(function() {
             //借取，交还
-            $(".recep-item li").click(function() {
-                $(this).toggleClass("active");
-                if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-blue")) {
+            $(".recep-item li").click(function () {
+                var _index = $(this).index();
+                if (!$(this).hasClass("recep-itemList")) {
+                    $(this).toggleClass("active");
+                }else if($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-blue")) {
                     $(".back,.back-blue").show();
+                    $(".back-blue").attr('data-open', _index);
                     $("body").addClass('no-scroll');
                 } else if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-yellow")) {
                     $(".back,.back-yellow").show();
+                    $(".back-yellow").attr('data-open', _index);
                     $("body").addClass('no-scroll');
                 }
-            });
-            //区域
-            $(".recep-btn .yes").click(function() {
-                $(".back,.back-green").show();
-                $("body").addClass('no-scroll');
             });
             //关闭弹框
             $(".back-btn p").click(function() {
                 $(".back,.back-cnt").hide();
+                $(".back-cnt").data('');
                 $("body").removeClass('no-scroll');
             });
+            //借/取产品点击确定
+            $(".back-blue .back-ok").click(function () {
+                var _liindex = $(this).parent().parent().data("open");
+                var hasActive = $(this).parent().parent().find(".recep-item li").hasClass("active");
+                if (hasActive) {
+                    $(".recep-blue .recep-item li").eq(_liindex).addClass("active");
+                } else {
+                    $(".recep-blue .recep-item li").eq(_liindex).removeClass("active");
+                }
+            });
+            //交/还产品点击确定
+            $(".back-yellow .back-ok").click(function () {
+                var _liindex = $(this).parent().parent().data("open");
+                var hasActive = $(this).parent().parent().find(".recep-item li").hasClass("active");
+                if (hasActive) {
+                    $(".recep-yellow .recep-item li").eq(_liindex).addClass("active");
+                } else {
+                    $(".recep-yellow .recep-item li").eq(_liindex).removeClass("active");
+                }
+            });
+            //区域
+            $(".recep-btn .yes").click(function () {
+                $(".back,.back-green").show();
+                $("body").addClass('no-scroll');
+            });
             // 区域确定按钮
-            $("#recepOk").on("click", function() {
+            $("#recepOk").on("click", function () {
                 window.location.href = "billList.html";
             });
         });

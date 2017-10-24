@@ -152,29 +152,39 @@
         $(function () {
             //借取，交还
             $(".recep-item li").click(function () {
-                $(this).toggleClass("active");
-                if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-blue")) {
+                var _index = $(this).index();
+                if (!$(this).hasClass("recep-itemList")) {
+                    $(this).toggleClass("active");
+                } else if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-blue")) {
                     $(".back,.back-blue").show();
-                    $("body").addClass('no-scroll');
-                } else if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-yellow")) {
-                    $(".back,.back-yellow").show();
+                    $(".back-blue").attr('data-open', _index);
                     $("body").addClass('no-scroll');
                 }
+            });
+            //借/取产品点击确定
+            $(".back-blue .back-ok").click(function () {
+                var _liindex = $(this).parent().parent().data("open");
+                var hasActive = $(this).parent().parent().find(".recep-item li").hasClass("active");
+                if (hasActive) {
+                    $(".recep-blue .recep-item li").eq(_liindex).addClass("active");
+                } else {
+                    $(".recep-blue .recep-item li").eq(_liindex).removeClass("active");
+                }
+            });
+            //关闭弹框
+            $(".back-btn p").click(function () {
+                $(".back,.back-cnt").hide();
+                $("body").removeClass('no-scroll');
             });
             //区域
             $(".recep-btn .yes").click(function () {
                 $(".back,.back-green").show();
                 $("body").addClass('no-scroll');
             });
-        });
-        //关闭弹框
-        $(".back-btn p").click(function () {
-            $(".back,.back-cnt").hide();
-            $("body").removeClass('no-scroll');
-        });
-        // 区域确定按钮
-        $("#recepOk").on("click",function(){
-            window.location.href="billList.html";
+            // 区域确定按钮
+            $("#recepOk").on("click", function () {
+                window.location.href = "billList.html";
+            });
         });
     </script>
 </body>
