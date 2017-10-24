@@ -7,6 +7,7 @@
 	<link type="text/css" rel="stylesheet"  href="css/common.css"/>
     <link href="css/receptionist.css" rel="stylesheet" />
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/receplist.js"></script>
 </head>
 <body>
 	<div class="contain">
@@ -32,7 +33,7 @@
                         <div class="left reTitle-left">借/取产品</div>
 				    </div>
                     <div class="recep-item">
-                        <ul class="clearfix">
+                        <ul class="back-blue">
                             <li class="recep-itemList" id="100">
                                 <span>领取证明</span>
                             </li>
@@ -48,13 +49,13 @@
                             <li>
                                 <span>领取文化衫</span>
                             </li>
-                            <li class="recep-itemList" id="102">
+                            <li>
                                 <span>领取证明</span>
                             </li>
                             <li>
                                 <span>材料盖章</span>
                             </li>
-                            <li class="recep-itemList" id="103">
+                            <li>
                                 <span>领取公仔</span>
                             </li>
                             <li>
@@ -78,238 +79,62 @@
 			<p>Copyright©1998-2014Tencent All Rights Reserved</p>
 		</footer>
         <div class="back"></div>
-        <!-- 借/取弹框内容 -->
-        <div class="back-cnt back-blue">
-                <p class="back-title">领取公仔</p>
-                    <div class="recep-item">
-                        <ul class="clearfix">
-                            <li>
-                                <span>归还档案材料</span>
-                            </li>
-                            <li>
-                                <span>社保卡</span>
-                            </li>
-                            <li>
-                                <span>归还户口卡</span>
-                            </li>
-                            <li>
-                                <span>政府安居</span>
-                            </li>
-                            <li>
-                                <span>毕业生落户</span>
-                            </li>
-                        </ul>
-                    </div>
-                <div class="back-btn">
-                    <p class="back-cancel">取消</p>
-                    <p class="back-ok">确定</p>
-                </div>
-        </div>
-        <!-- 所在区域弹框内容 -->
+
+        <!-- 列表数据含二级弹出框 -->
+        <div class="back-cnt back-dialog">
+            <p class="back-title">领取公仔</p>
+            <div class="recep-item">
+                <ul class="clearfix">
+                    <li>
+                        <span>归还档案材料</span>
+                    </li>
+                    <li>
+                        <span>社保卡</span>
+                    </li>
+                    <li>
+                        <span>归还户口卡</span>
+                    </li>
+                    <li>
+                        <span>政府安居</span>
+                    </li>
+                    <li>
+                        <span>毕业生落户</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="back-btn">
+                <p class="back-cancel">取消</p>
+                <p class="back-ok">确定</p>
+            </div>
+        </div> 
+
+        <!-- 所在区域弹框 -->
         <div class="back-cnt back-green">
-                <p class="back-title">所在区域</p>
-                    <div class="recep-item">
-                        <ul class="clearfix">
-                            <li>
-                                <span>区域一</span>
-                            </li>
-                            <li>
-                                <span>区域二</span>
-                            </li>
-                            <li>
-                                <span>区域三</span>
-                            </li>
-                            <li>
-                                <span>区域四</span>
-                            </li>
-                            <li>
-                                <span>区域五</span>
-                            </li>
-                        </ul>
-                    </div>
-                <div class="back-btn">
-                    <p class="back-cancel">取消</p>
-                    <p class="back-ok" id="recepOk">确定</p>
-                </div>
+            <p class="back-title">所在区域</p>
+            <div class="recep-item">
+                <ul class="clearfix">
+                    <li>
+                        <span>区域一</span>
+                    </li>
+                    <li>
+                        <span>区域二</span>
+                    </li>
+                    <li>
+                        <span>区域三</span>
+                    </li>
+                    <li>
+                        <span>区域四</span>
+                    </li>
+                    <li>
+                        <span>区域五</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="back-btn">
+                <p class="back-cancel">取消</p>
+                <p class="back-ok" id="recepOk">确定</p>
+            </div>
         </div>
-	</div>
-    <script>
-        $(function () {
-            var curID = "";
-            var serverData = [
-                {
-                    "pid": 100,
-                    "name": "领取证明",
-                    "subList": [
-                        {
-                            "id": 1,
-                            "name": "领取证明1",
-                            "status": 0
-                        },
-                        {
-                            "id": 2,
-                            "name": "领取证明2",
-                            "status": 0
-                        },
-                        {
-                            "id": 3,
-                            "name": "领取证明3",
-                            "status": 0
-                        },
-                        {
-                            "id": 4,
-                            "name": "领取证明4",
-                            "status": 0
-                        }
-                    ]
-                },
-                {
-                    "pid": 101,
-                    "name": "领取公仔",
-                    "subList": [
-                        {
-                            "id": 1,
-                            "name": "公仔1",
-                            "status": 0
-                        },
-                        {
-                            "id": 2,
-                            "name": "公仔2",
-                            "status": 0
-                        },
-                        {
-                            "id": 3,
-                            "name": "公仔3",
-                            "status": 0
-                        },
-                        {
-                            "id": 4,
-                            "name": "公仔4",
-                            "status": 0
-                        }
-                    ]
-                },
-                {
-                    "pid": 102,
-                    "name": "归还档案材料",
-                    "subList": [
-                        {
-                            "id": 1,
-                            "name": "归还档案材料1",
-                            "status": 0
-                        },
-                        {
-                            "id": 2,
-                            "name": "归还档案材料2",
-                            "status": 0
-                        },
-                        {
-                            "id": 3,
-                            "name": "归还档案材料3",
-                            "status": 0
-                        },
-                        {
-                            "id": 4,
-                            "name": "归还档案材料4",
-                            "status": 0
-                        }
-                    ]
-                },
-                {
-                    "pid": 103,
-                    "name": "归还户口卡",
-                    "subList": [
-                        {
-                            "id": 1,
-                            "name": "归还户口卡1",
-                            "status": 0
-                        },
-                        {
-                            "id": 2,
-                            "name": "归还户口卡2",
-                            "status": 0
-                        },
-                        {
-                            "id": 3,
-                            "name": "归还户口卡3",
-                            "status": 0
-                        },
-                        {
-                            "id": 4,
-                            "name": "归还户口卡4",
-                            "status": 0
-                        }
-                    ]
-                }
-            ]
-            //借取，交还
-            $(".recep-item").delegate("li", "click", function (event) {
-                var _index = $(this).index();
-                if (!$(this).hasClass("recep-itemList")) {
-                    $(this).toggleClass("active");
-                } else if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-blue")) {
-                    $(".back-blue").attr('data-open', _index);
-                    $("body").addClass('no-scroll');
-                    var pidss = $(this).attr("id");
-                    curID = pidss;
-                    var html = '';
-                    for (var n = 0; n < serverData.length; n++) {
-                        if (serverData[n].pid == pidss) {
-                            var list = serverData[n].subList;
-                            for (i = 0; i < list.length; i++) {
-                                var name = list[i].name;
-                                var status = list[i].status;
-                                if (status == 1) {
-                                    html += "<li class='active'>" + name + "</li>";
-                                } else {
-                                    html += "<li>" + name + "</li>";
-                                }
-                            }
-                        }
-                    }
-                    $(".back-blue .recep-item ul").html(html);
-                    $(".back,.back-blue").show();
-                }
-            });
-            //借/取产品点击确定
-            $(".back-blue .back-ok").click(function () {
-                var _liindex = $(this).parent().parent().attr('data-open');
-                var hasActive = $(this).parent().parent().find(".recep-item li").hasClass("active");
-                if (hasActive) {
-                    $(".recep-blue .recep-item li").eq(_liindex).addClass("active");
-                } else {
-                    $(".recep-blue .recep-item li").eq(_liindex).removeClass("active");
-                }
-                for (var n = 0; n < serverData.length; n++) {
-                    if (serverData[n].pid == curID) {
-                        var list = serverData[n].subList;
-                        $(".back-blue .recep-item ul li").each(function () {
-                            var flag = $(this).hasClass("active");
-                            var ind = $(this).index();
-                            if (flag) {
-                                list[ind].status = 1;
-                            } else {
-                                list[ind].status = 0;
-                            }
-                        });
-                    }
-                }
-            });
-            //关闭弹框
-            $(".back-btn p").click(function () {
-                $(".back,.back-cnt").hide();
-                $("body").removeClass('no-scroll');
-            });
-            //区域
-            $(".recep-btn .yes").click(function () {
-                $(".back,.back-green").show();
-                $("body").addClass('no-scroll');
-            });
-            // 区域确定按钮
-            $("#recepOk").on("click", function () {
-                window.location.href = "billList.html";
-            });
-        });
-    </script>
+	</div> 
 </body>
 </html>

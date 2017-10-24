@@ -46,3 +46,12 @@
 @media screen and (max-width: 768px) {
   .recep-item li{min-width:23%;}
 }
+
+.back-blue{
+	clear: both;
+	overflow:auto;
+}
+.back-yellow{
+	clear: both;
+	overflow:auto;
+}
