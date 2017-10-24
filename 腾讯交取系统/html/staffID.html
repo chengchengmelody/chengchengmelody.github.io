@@ -45,8 +45,8 @@
 						<!-- 用户查询 -->
 						<div class="staff-search">
 							<ul>
-								<li>v_hfengwang(王峰)</li>
-								<li>v_hfengwang(王峰)</li>
+								<li id="p00791261">v_hfengwang(王峰1)</li>
+								<li id="p00791262">v_hfengwang(王峰2)</li>
 							</ul>
 						</div>
 					</div>
@@ -66,8 +66,8 @@
 						<!-- 用户查询 -->
 						<div class="staff-search">
 							<ul>
-								<li>v_hfengwang(王峰)</li>
-								<li>v_hfengwang(王峰)</li>
+								<li id="p00791261">v_hfengwang(王峰1)</li>
+								<li id="p00791262">v_hfengwang(王峰2)</li>
 							</ul>
 						</div>
 					</div>
@@ -103,13 +103,18 @@
 				var that = $(this); 
 				if(that.val()){
 					that.nextAll(".staff-search").show();
+					that.nextAll(".login-clear").show();
 				} else{
 					that.nextAll(".staff-search").hide();
+					that.nextAll(".login-clear").hide();
 				}
 			});
 
 			// 显示选中的员工
 			$(".staff-search li").on('click', function(){
+				var id = $(this).attr("id");
+				var val = $(this).html();
+				$(this).parents(".staff-line").find(".staff-input").val(val);
 				$(this).parents(".staff-search").hide();
 				$(this).parents(".staff-search").prevAll(".staff-sel").show();
 			});
