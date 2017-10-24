@@ -36,13 +36,13 @@
                     </div>
                     <div class="recep-item">
                         <ul class="clearfix">
-                            <li class="recep-itemList">
+                            <li class="recep-itemList" id="100">
                                 <span>领取证明</span>
                             </li>
                             <li>
                                 <span>材料盖章</span>
                             </li>
-                            <li class="recep-itemList">
+                            <li class="recep-itemList" id="101">
                                 <span>领取公仔</span>
                             </li>
                             <li>
@@ -174,16 +174,142 @@
         </div>
     </div>
     <script>
-        $(function() {
+        $(function () {
+            var curID = "";
+            var serverData = [
+                {
+                    "pid":100,
+                    "name":"领取证明",
+                    "subList":[
+                        {
+                            "id":1,
+                            "name":"领取证明1",
+                            "status":0
+                        },
+                        {
+                            "id":2,
+                            "name": "领取证明2",
+                            "status":0
+                        },
+                        {
+                            "id":3,
+                            "name": "领取证明3",
+                            "status":0
+                        },
+                        {
+                            "id":4,
+                            "name": "领取证明4",
+                            "status":0
+                        }
+                    ]
+                },
+                {
+                    "pid": 101,
+                    "name": "领取公仔",
+                    "subList": [
+                        {
+                            "id": 1,
+                            "name": "公仔1",
+                            "status": 0
+                        },
+                        {
+                            "id": 2,
+                            "name": "公仔2",
+                            "status": 0
+                        },
+                        {
+                            "id": 3,
+                            "name": "公仔3",
+                            "status": 0
+                        },
+                        {
+                            "id": 4,
+                            "name": "公仔4",
+                            "status": 0
+                        }
+                    ]
+                },
+                {
+                    "pid": 102,
+                    "name": "归还档案材料",
+                    "subList": [
+                        {
+                            "id": 1,
+                            "name": "归还档案材料1",
+                            "status": 0
+                        },
+                        {
+                            "id": 2,
+                            "name": "归还档案材料2",
+                            "status": 0
+                        },
+                        {
+                            "id": 3,
+                            "name": "归还档案材料3",
+                            "status": 0
+                        },
+                        {
+                            "id": 4,
+                            "name": "归还档案材料4",
+                            "status": 0
+                        }
+                    ]
+                },
+                {
+                    "pid": 103,
+                    "name": "归还户口卡",
+                    "subList": [
+                        {
+                            "id": 1,
+                            "name": "归还户口卡1",
+                            "status": 0
+                        },
+                        {
+                            "id": 2,
+                            "name": "归还户口卡2",
+                            "status": 0
+                        },
+                        {
+                            "id": 3,
+                            "name": "归还户口卡3",
+                            "status": 0
+                        },
+                        {
+                            "id": 4,
+                            "name": "归还户口卡4",
+                            "status": 0
+                        }
+                    ]
+                }
+            ]  
             //借取，交还
-            $(".recep-item li").click(function () {
+            $(".recep-item").delegate("li","click", function (event) {
+                event.stopPropagation();
                 var _index = $(this).index();
                 if (!$(this).hasClass("recep-itemList")) {
                     $(this).toggleClass("active");
                 }else if($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-blue")) {
-                    $(".back,.back-blue").show();
                     $(".back-blue").attr('data-open', _index);
                     $("body").addClass('no-scroll');
+                    var pidss = $(this).attr("id");
+                    curID = pidss;
+                    var html = '';
+                    for (var n = 0; n < serverData.length;n++){
+                        if (serverData[n].pid == pidss) {
+                            var list = serverData[n].subList;
+                            for (i = 0; i < list.length; i++) {
+                                var name = list[i].name;
+                                var status = list[i].status;
+                                if (status == 1) {
+                                    html += "<li class='active'>" + name + "</li>";
+                                } else {
+                                    html += "<li>" + name + "</li>";
+                                }
+                            }
+                        }
+                    }
+                    $(".back-blue .recep-item ul").html(html);
+                    $(".back,.back-blue").show();
                 } else if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-yellow")) {
                     $(".back,.back-yellow").show();
                     $(".back-yellow").attr('data-open', _index);
@@ -198,22 +324,51 @@
             });
             //借/取产品点击确定
             $(".back-blue .back-ok").click(function () {
-                var _liindex = $(this).parent().parent().data("open");
+                var _liindex = $(this).parent().parent().attr('data-open');
                 var hasActive = $(this).parent().parent().find(".recep-item li").hasClass("active");
                 if (hasActive) {
                     $(".recep-blue .recep-item li").eq(_liindex).addClass("active");
                 } else {
                     $(".recep-blue .recep-item li").eq(_liindex).removeClass("active");
                 }
+                for (var n = 0; n < serverData.length; n++) {
+                    if (serverData[n].pid == curID) {
+                        var list = serverData[n].subList; 
+                        $(".back-blue .recep-item ul li").each(function () {
+                            var flag = $(this).hasClass("active");
+                            var ind = $(this).index();
+                            console.log(list[ind])
+                            if (flag) {
+                                list[ind].status = 1;
+                            } else {
+                                list[ind].status = 0;
+                            } 
+                        }); 
+                    }
+                }
             });
             //交/还产品点击确定
             $(".back-yellow .back-ok").click(function () {
-                var _liindex = $(this).parent().parent().data("open");
+                var _liindex = $(this).parent().parent().attr('data-open');
                 var hasActive = $(this).parent().parent().find(".recep-item li").hasClass("active");
                 if (hasActive) {
                     $(".recep-yellow .recep-item li").eq(_liindex).addClass("active");
                 } else {
                     $(".recep-yellow .recep-item li").eq(_liindex).removeClass("active");
+                }
+                for (var n = 0; n < serverData.length; n++) {
+                    if (serverData[n].pid == curID) {
+                        var list = serverData[n].subList; 
+                        $(".back-yellow .recep-item ul li").each(function () {
+                            var flag = $(this).hasClass("active");
+                            var ind = $(this).index(); 
+                            if (flag) {
+                                list[ind].status = 1;
+                            } else {
+                                list[ind].status = 0;
+                            }
+                        }); 
+                    }
                 }
             });
             //区域

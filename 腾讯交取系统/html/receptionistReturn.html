@@ -163,7 +163,7 @@
             });
             //交/还产品点击确定
             $(".back-yellow .back-ok").click(function () {
-                var _liindex = $(this).parent().parent().data("open");
+                var _liindex = $(this).parent.parent().attr('data-open');
                 var hasActive = $(this).parent().parent().find(".recep-item li").hasClass("active");
                 if (hasActive) {
                     $(".recep-yellow .recep-item li").eq(_liindex).addClass("active");
