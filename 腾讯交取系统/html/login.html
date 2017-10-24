@@ -32,10 +32,10 @@
 					<div class="login-l">
 						<ul>
 							<li>
-								<input type="text" placeholder="请输入用户名……">
+								<input type="text" class="name" placeholder="请输入用户名……">
 							</li>
 							<li>
-								<input type="password" placeholder="请输入密码……">
+								<input type="password" class="pwd" placeholder="请输入密码……">
 							</li>
 							<li>
 								<input type="button" value="登录" class="btnLogin">
@@ -65,11 +65,29 @@
 			<p>技术支持：8002(人力资源IT热线）</p>
 			<p>Copyright©1998-2014Tencent All Rights Reserved</p>
 		</footer>
+
+	    <!-- 提示框 -->
+	    <span class="tip"></span>
 	</div>
 	<script type="text/javascript">
 		$(function(){
 			$(".btnLogin").on("click",function(){
-				window.location.href="staffID.html";
+				var name = $(".name").val();
+				var pwd = $(".pwd").val();
+				var tip = '';
+				if(name == ""){
+					tip = "用户名不能为空";
+				} else if(pwd == ""){
+					tip = "密码不能为空";
+				} 
+				if(tip){
+					$(".tip").html(tip).show(); 
+	            	setTimeout(function(){  
+						$(".tip").hide();         		
+	            	},2000);
+				} else {
+					window.location.href="staffID.html";
+				} 
 			});
 		});
 	</script>
