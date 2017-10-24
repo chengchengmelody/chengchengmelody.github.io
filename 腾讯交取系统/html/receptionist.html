@@ -61,13 +61,13 @@
                     </div>
                     <div class="recep-item">
                         <ul class="clearfix">
-                            <li class="recep-itemList">
+                            <li class="recep-itemList" id="102">
                                 <span>归还档案材料</span>
                             </li>
                             <li>
                                 <span>社保卡</span>
                             </li>
-                            <li class="recep-itemList">
+                            <li class="recep-itemList" id="103">
                                 <span>归还户口卡</span>
                             </li>
                             <li>
@@ -311,9 +311,27 @@
                     $(".back-blue .recep-item ul").html(html);
                     $(".back,.back-blue").show();
                 } else if ($(this).hasClass("recep-itemList") && $(this).parents(".recep-list").hasClass("recep-yellow")) {
-                    $(".back,.back-yellow").show();
                     $(".back-yellow").attr('data-open', _index);
                     $("body").addClass('no-scroll');
+                    var pidss = $(this).attr("id");
+                    curID = pidss;
+                    var html = '';
+                    for (var n = 0; n < serverData.length; n++) {
+                        if (serverData[n].pid == pidss) {
+                            var list = serverData[n].subList;
+                            for (i = 0; i < list.length; i++) {
+                                var name = list[i].name;
+                                var status = list[i].status;
+                                if (status == 1) {
+                                    html += "<li class='active'>" + name + "</li>";
+                                } else {
+                                    html += "<li>" + name + "</li>";
+                                }
+                            }
+                        }
+                    }
+                    $(".back-yellow .recep-item ul").html(html);
+                    $(".back,.back-yellow").show();
                 }
             });
             //关闭弹框
@@ -337,7 +355,6 @@
                         $(".back-blue .recep-item ul li").each(function () {
                             var flag = $(this).hasClass("active");
                             var ind = $(this).index();
-                            console.log(list[ind])
                             if (flag) {
                                 list[ind].status = 1;
                             } else {
