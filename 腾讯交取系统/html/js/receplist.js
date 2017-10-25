@@ -110,8 +110,7 @@ $(function() {
             return;
         }
         var ulClass = $(this).parents("ul").attr("class");
-        $(".back-dialog").attr('data-open', _index);
-        $(".back-dialog").addClass(ulClass);
+        $(".dialog .back-cnt").attr("class", "back-cnt " + ulClass);
         var pidss = $(this).attr("id");
         curID = pidss;
 
@@ -131,21 +130,20 @@ $(function() {
                 }
             }
         }
-        $(".back-dialog .recep-item ul").html(html);
-        $(".back,.back-dialog").show();
+        $(".dialog .recep-item ul").html(html);
+        $(".dialog").show();
     });
     //关闭弹出框
     $(".back-btn p").click(function() {
-        $(".back,.back-dialog, .back-green").hide();
+        $(".dialog").hide();
     });
     //弹出框确定
-    $(".back-dialog .back-ok").click(function() {
-        var _liindex = $(this).parent().parent().attr('data-open');
+    $(".dialog .back-ok").click(function() { 
         for (var n = 0; n < serverData.length; n++) {
             if (serverData[n].pid == curID) {
                 var list = serverData[n].subList;
                 var num = 0;
-                $(".back-dialog .recep-item ul li").each(function() {
+                $(this).parents(".dialog").find(".recep-item ul li").each(function() {
                     var flag = $(this).hasClass("active");
                     var ind = $(this).index();
                     if (flag) {
@@ -166,7 +164,7 @@ $(function() {
 
     //区域弹出层
     $(".recep-btn .yes").click(function() {
-        $(".back,.back-green").show();
+        $("#back-green").show();
     });
     // 区域确定按钮
     $("#recepOk").on("click", function() {
