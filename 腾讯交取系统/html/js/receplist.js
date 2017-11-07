@@ -109,6 +109,7 @@ $(function() {
             $(this).toggleClass("active");
             return;
         }
+        $("body,html").addClass("hidden");
         var ulClass = $(this).parents("ul").attr("class");
         $(".dialog .back-cnt").attr("class", "back-cnt " + ulClass);
         var pidss = $(this).attr("id");
@@ -136,6 +137,7 @@ $(function() {
     //关闭弹出框
     $(".back-btn p").click(function() {
         $(".dialog").hide();
+        $("body,html").removeClass("hidden");
     });
     //弹出框确定
     $(".dialog .back-ok").click(function() { 
@@ -160,6 +162,7 @@ $(function() {
                 }
             }
         }
+        $("body,html").removeClass("hidden");
     });
 
     //区域弹出层

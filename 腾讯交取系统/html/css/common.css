@@ -208,3 +208,6 @@ footer{
 .login-con{
   padding:2rem;
 }
+.hidden{
+  overflow:hidden;
+}
