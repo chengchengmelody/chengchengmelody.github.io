@@ -211,10 +211,12 @@ footer{
 .hidden{
   overflow:hidden;
 }
+a,
 .recep-item,
 .recep-item ul,
 .recep-item ul li,
 {
   -webkit-user-select:none;
   -webkit-tap-highlight-color: rgba(200,200,200,0);
+  appearance:none;
 }
