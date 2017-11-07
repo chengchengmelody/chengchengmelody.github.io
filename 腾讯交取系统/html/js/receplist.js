@@ -100,17 +100,22 @@ $(function() {
                 }
             ]
         }
-    ]
+    ];
 
-    // 防止ios点击li整个ul有反馈
-    $(".recep-item").css({
-        '-webkit-user-select': 'none',
-        '-webkit-tap-highlight-color': 'rgba(200,200,200,0)'
-    }).find('li').css({
-        '-webkit-user-select': 'none',
-        '-webkit-tap-highlight-color': 'rgba(200,200,200,0)'
-    })
- 
+    // 禁止页面下拉
+    function setMove(){
+        $("body,html").addClass("hidden");
+        $("body").on("touchmove",function(event){
+            event.preventDefault;
+        }, false)
+    }
+    // 恢复页面下拉
+    function removeMove(){
+        $("body,html").removeClass("hidden");
+        $("body").off("touchmove");
+        $("body").unbind("touchmove");
+    }
+    
     //点击列表数据，带有二级数据的弹出框展示
     $(".recep-item").delegate("li", "click", function(event) {
         event.stopPropagation();
@@ -123,8 +128,7 @@ $(function() {
         var ulClass = $(this).parents("ul").attr("class");
         $(".dialog .back-cnt").attr("class", "back-cnt " + ulClass);
         var pidss = $(this).attr("id");
-        curID = pidss;
-
+        curID = pidss; 
         var html = '';
         for (var n = 0; n < serverData.length; n++) {
             if (serverData[n].pid == pidss) {
@@ -186,17 +190,4 @@ $(function() {
         window.location.href = "billList.html";
     });
 
-    // 禁止页面下拉
-    function setMove(){
-        $("body,html").addClass("hidden");
-        $("body").on("touchmove",function(event){
-            event.preventDefault;
-        }, false)
-    }
-    // 恢复页面下拉
-    function removeMove(){
-        $("body,html").removeClass("hidden");
-        $("body").off("touchmove");
-        $("body").unbind("touchmove");
-    }
 });
