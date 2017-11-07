@@ -211,8 +211,7 @@ footer{
 .hidden{
   overflow:hidden;
 }  
-.recep-item ul,
-.recep-item ul li,
+.recep-item
 {
   background:#fff;
   -webkit-user-select:none;
