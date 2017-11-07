@@ -118,7 +118,12 @@ $(function() {
             $(this).toggleClass("active");
             return;
         }
+
         $("body,html").addClass("hidden");
+        $("body").on("touchmove",function(event){
+            event.preventDefault;
+        }, false)
+
         var ulClass = $(this).parents("ul").attr("class");
         $(".dialog .back-cnt").attr("class", "back-cnt " + ulClass);
         var pidss = $(this).attr("id");
@@ -146,7 +151,9 @@ $(function() {
     //关闭弹出框
     $(".back-btn p").click(function() {
         $(".dialog").hide();
+
         $("body,html").removeClass("hidden");
+        $("body").off("touchmove")；
     });
     //弹出框确定
     $(".dialog .back-ok").click(function() { 
@@ -171,7 +178,9 @@ $(function() {
                 }
             }
         }
+
         $("body,html").removeClass("hidden");
+        $("body").off("touchmove")；
     });
 
     //区域弹出层
