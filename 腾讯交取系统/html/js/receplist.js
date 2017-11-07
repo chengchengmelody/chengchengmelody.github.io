@@ -119,13 +119,7 @@ $(function() {
             $(this).toggleClass("active");
             return;
         }
-
-        // 禁止页面下拉
-        $("body,html").addClass("hidden");
-        $("body").on("touchmove",function(event){
-            event.preventDefault;
-        }, false)
-
+        setMove();
         var ulClass = $(this).parents("ul").attr("class");
         $(".dialog .back-cnt").attr("class", "back-cnt " + ulClass);
         var pidss = $(this).attr("id");
@@ -153,10 +147,7 @@ $(function() {
     //关闭弹出框
     $(".back-btn p").click(function() {
         $(".dialog").hide();
-        // 恢复页面下拉
-        $("body,html").removeClass("hidden");
-        $("body").off("touchmove");
-        $("body").unbind("touchmove");
+        removeMove();
     });
     //弹出框确定
     $(".dialog .back-ok").click(function() { 
@@ -181,27 +172,31 @@ $(function() {
                 }
             }
         }
-        // 恢复页面下拉
-        $("body,html").removeClass("hidden");
-        $("body").off("touchmove");
-        $("body").unbind("touchmove");
+        removeMove();
     });
 
     //区域弹出层
     $(".recep-btn .yes").click(function() {
         $("#back-green").show();
-        // 禁止页面下拉
+        setMove();
+    });
+    // 区域确定按钮
+    $("#recepOk").on("click", function() {
+        removeMove();
+        window.location.href = "billList.html";
+    });
+
+    // 禁止页面下拉
+    function setMove(){
         $("body,html").addClass("hidden");
         $("body").on("touchmove",function(event){
             event.preventDefault;
         }, false)
-    });
-    // 区域确定按钮
-    $("#recepOk").on("click", function() {
-        // 恢复页面下拉
+    }
+    // 恢复页面下拉
+    function removeMove(){
         $("body,html").removeClass("hidden");
         $("body").off("touchmove");
         $("body").unbind("touchmove");
-        window.location.href = "billList.html";
-    });
+    }
 });
