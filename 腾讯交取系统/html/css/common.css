@@ -217,6 +217,5 @@ a,
 .recep-item ul li,
 {
   -webkit-user-select:none;
-  -webkit-tap-highlight-color: rgba(200,200,200,0);
-  appearance:none;
+  -webkit-tap-highlight-color: rgba(200,200,200,0); 
 }
