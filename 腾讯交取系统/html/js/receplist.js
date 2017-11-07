@@ -101,6 +101,15 @@ $(function() {
             ]
         }
     ]
+    
+    // 防止ios点击li整个ul有反馈
+    $(".recep-item").css({
+        '-webkit-user-select': 'none',
+        '-webkit-tap-highlight-color': 'rgba(200,200,200,0)'
+    }).find('li').css({
+        '-webkit-user-select': 'none',
+        '-webkit-tap-highlight-color': 'rgba(200,200,200,0)'
+    })
     //点击列表数据，带有二级数据的弹出框展示
     $(".recep-item").delegate("li", "click", function(event) {
         event.stopPropagation();
