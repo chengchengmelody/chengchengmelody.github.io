@@ -112,10 +112,6 @@ $(function() {
     })
 
 
-        $("body,html").addClass("hidden");
-        $("body").on("touchmove",function(event){
-            event.preventDefault;
-        }, false)
 
 
     //点击列表数据，带有二级数据的弹出框展示
@@ -127,6 +123,11 @@ $(function() {
             return;
         }
 
+        $("body,html").addClass("hidden");
+        $("body").on("touchmove",function(event){
+            event.preventDefault;
+        }, false)
+        
         var ulClass = $(this).parents("ul").attr("class");
         $(".dialog .back-cnt").attr("class", "back-cnt " + ulClass);
         var pidss = $(this).attr("id");
