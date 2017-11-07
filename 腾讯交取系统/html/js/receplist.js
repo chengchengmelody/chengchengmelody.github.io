@@ -110,6 +110,14 @@ $(function() {
         '-webkit-user-select': 'none',
         '-webkit-tap-highlight-color': 'rgba(200,200,200,0)'
     })
+
+
+        $("body,html").addClass("hidden");
+        $("body").on("touchmove",function(event){
+            event.preventDefault;
+        }, false)
+
+
     //点击列表数据，带有二级数据的弹出框展示
     $(".recep-item").delegate("li", "click", function(event) {
         event.stopPropagation();
@@ -118,11 +126,6 @@ $(function() {
             $(this).toggleClass("active");
             return;
         }
-
-        $("body,html").addClass("hidden");
-        $("body").on("touchmove",function(event){
-            event.preventDefault;
-        }, false)
 
         var ulClass = $(this).parents("ul").attr("class");
         $(".dialog .back-cnt").attr("class", "back-cnt " + ulClass);
@@ -153,7 +156,8 @@ $(function() {
         $(".dialog").hide();
 
         $("body,html").removeClass("hidden");
-        $("body").off("touchmove")；
+        $("body").off("touchmove");
+        $("body").unbind("touchmove");
     });
     //弹出框确定
     $(".dialog .back-ok").click(function() { 
@@ -180,7 +184,8 @@ $(function() {
         }
 
         $("body,html").removeClass("hidden");
-        $("body").off("touchmove")；
+        $("body").off("touchmove");
+        $("body").unbind("touchmove");
     });
 
     //区域弹出层
