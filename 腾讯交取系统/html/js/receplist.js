@@ -110,10 +110,7 @@ $(function() {
         '-webkit-user-select': 'none',
         '-webkit-tap-highlight-color': 'rgba(200,200,200,0)'
     })
-
-
-
-
+ 
     //点击列表数据，带有二级数据的弹出框展示
     $(".recep-item").delegate("li", "click", function(event) {
         event.stopPropagation();
@@ -123,11 +120,12 @@ $(function() {
             return;
         }
 
+        // 禁止页面下拉
         $("body,html").addClass("hidden");
         $("body").on("touchmove",function(event){
             event.preventDefault;
         }, false)
-        
+
         var ulClass = $(this).parents("ul").attr("class");
         $(".dialog .back-cnt").attr("class", "back-cnt " + ulClass);
         var pidss = $(this).attr("id");
@@ -155,7 +153,7 @@ $(function() {
     //关闭弹出框
     $(".back-btn p").click(function() {
         $(".dialog").hide();
-
+        // 恢复页面下拉
         $("body,html").removeClass("hidden");
         $("body").off("touchmove");
         $("body").unbind("touchmove");
@@ -183,7 +181,7 @@ $(function() {
                 }
             }
         }
-
+        // 恢复页面下拉
         $("body,html").removeClass("hidden");
         $("body").off("touchmove");
         $("body").unbind("touchmove");
@@ -192,9 +190,18 @@ $(function() {
     //区域弹出层
     $(".recep-btn .yes").click(function() {
         $("#back-green").show();
+        // 禁止页面下拉
+        $("body,html").addClass("hidden");
+        $("body").on("touchmove",function(event){
+            event.preventDefault;
+        }, false)
     });
     // 区域确定按钮
     $("#recepOk").on("click", function() {
+        // 恢复页面下拉
+        $("body,html").removeClass("hidden");
+        $("body").off("touchmove");
+        $("body").unbind("touchmove");
         window.location.href = "billList.html";
     });
 });
