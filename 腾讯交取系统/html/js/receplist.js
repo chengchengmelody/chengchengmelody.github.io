@@ -101,9 +101,9 @@ $(function() {
             ]
         }
     ]
-    
+
     // 防止ios点击li整个ul有反馈
-    $(".recep-item").css({
+    $("ul").css({
         '-webkit-user-select': 'none',
         '-webkit-tap-highlight-color': 'rgba(200,200,200,0)'
     }).find('li').css({
